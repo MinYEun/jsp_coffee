@@ -3,12 +3,13 @@
 <html>
 <!DOCTYPE>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
    <title>login</title>
    <style>
    html,body {width: 100%; height: 100%; text-align: center; }
    .outer{
-      vartical-align: middle;
+   	  margin: 0 auto;
       text-align: center;
       display: inline-block;
       width: 800px;
@@ -16,30 +17,42 @@
    }
 
    .inner{
-      margin: 0 px;
-      border: 1px solid black;
-      display: inline-block;
+   	  background-color: #decac5;
+      margin: 0 auto;
+      border: 1px solid #decac5;
+      display: inline-block;  
       text-align: center;
-      vartical-align: middle;
       width: 600px;
-
-
    }
+   
+   #login{
+   width: 80px;
+   height: 40px;
+   background-color: #c9c9c9;
+   color: black;
+   border: 2px solid black;
+   margin: 10px;
+   }
+  	
+  #login:hover {
+  background-color: #b38f88;
+  color: white;
+  }
    </style>
 </head>
 <body>
 <div class="outer">
    <div class="logo">
-      <img height="400px" alt="logoimage" src="/coffee/images/coffee.jpg">
+      <img align="center" height="400px" alt="logoimage" src="/coffee/images/coffee.jpg">
    </div>
    <div class="inner">
-   <table height="200px" align = "center">
+   <table height="200px" align="center">
       <tr>
-      <td align="center">
-         <img width="150px" height="100px" src="/coffee/images/login.PNG">
+      <td width="150px" align="center">
+         <img width="150px" height="80px" src="/coffee/images/loginlogo.PNG">
       </td>
          
-      <td>
+      <td width="300px">
          <label for="id">아이디</label>
          <input id="id" name="id" type="email" size="20"
          maxlength="50" placeholder="ID">
@@ -49,7 +62,7 @@
          <input id="passwd" name="passwd" type="password"
          size="20" placeholder="PASSWORD" maxlength="16">
       </td>
-      <td width="80px" align="center">
+      <td width="150px" margin-right="40px" align="left">
          <button id="login">로그인</button>
       </td>
       </tr>
