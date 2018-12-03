@@ -79,12 +79,12 @@
 				<img src="/coffee/images/coffee.jpg" alt="logo" width="350px" height="200px" />
 			</div>
 
-			<div class="textarea">
-				<textarea name="comment" rows="20" cols="100"></textarea>
-			</div>
-
-			<div class="btn_del">
-				<button type="submit">삭제</button>
+			<div class="list_del">
+				<div class="list">test</div>
+				<br>
+				<div class="btn_del">
+					<button type="submit">삭제</button>
+				</div>
 			</div>
 		</div>
 	</div>

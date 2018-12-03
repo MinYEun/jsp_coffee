@@ -1,6 +1,7 @@
 @charset "UTF-8";
-<style>
-.outer {
+
+<
+style>.outer {
 	margin: 0 auto;
 	width: 1800px;
 	height: 900px;
@@ -90,20 +91,37 @@
 	margin-left: 500px;
 }
 
+.list {
+	border: 1px solid;
+}
+
+.menu_add>.list {
+	text-align: center;
+}
+
 .menu_add>#logo_img {
 	text-align: center;
 }
 
-.menu_add>.textarea {
+.list_del {
+	
+}
+
+.menu_add>.list_del>.list {
+	border-color: black;
+	width: 1500px;
+	height: 400px;
 	text-align: center;
 }
 
 .btn_del {
-	width: 1100px;
+	width: 1400px;
 	text-align: right;
 }
 
 h1 {
 	letter-spacing: 5px;
 }
-</style>
+</
+style
+>
