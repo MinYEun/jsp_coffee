@@ -65,12 +65,7 @@
 					</ul>
 				</ul>
 			</div>
-		</span>
-		<div class="status">
-     	 xxx님 안녕하세요
-      	<button id="logout"> 로그아웃</button>
-   		 </div>
-   		 
+		</span>   		 
 		<div class="menu_add">
 			<h1>고객관리　─　추가</h1>
 			<hr/>
@@ -98,7 +93,7 @@
          size="20" placeholder="PASSWORD" maxlength="16">
       </td>
       <td width="150px" margin-right="40px" align="left">
-         <button id="login">로그인</button>
+         <button id="login">추가</button>
       </td>
       </tr>
    </table>         
