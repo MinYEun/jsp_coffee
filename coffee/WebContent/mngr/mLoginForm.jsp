@@ -1,81 +1,60 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<html>
-<!DOCTYPE>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-   <title>login</title>
-   <style>
-   html,body {width: 99%; height: 99%; text-align: center; }
-   .outer{
-   	  margin: 0 auto;
-      text-align: center;
-      display: inline-block;
-      width: 800px;
-      height: 1000px;
-   }
+<script src="/coffee/mngr/mLoginPro.js"></script>
+<link rel="stylesheet" href="/coffee/css/mLogin.css"/>
 
-   .inner{
-   	  background-color: #decac5;
-      margin: 0 auto;
-      border: 1px solid #decac5;
-      display: inline-block;  
-      text-align: center;
-      width: 600px;
-   }
-   
-   #login{
-   width: 80px;
-   height: 40px;
-   background-color: #c9c9c9;
-   color: black;
-   border: 2px solid black;
-   margin: 10px;
-   }
-  	
-  #login:hover {
-  background-color: #b38f88;
-  color: white;
-  }
-   </style>
-</head>
-<body>
-<div class="outer">
-   <div class="logo">
-      <img align="center" height="400px" alt="logoimage" src="/coffee/images/coffee.jpg">
-   </div>
-   <div class="inner">
-   <table height="200px" align="center">
-      <tr>
-      <td width="150px" align="center">
-         <img width="150px" height="80px" src="/coffee/images/loginlogo.PNG">
-      </td>
-         
-      <td width="300px">
-         <label for="id">아이디</label>
-         <input id="id" name="id" type="email" size="20"
-         maxlength="50" placeholder="ID">
-         <br /><br />
-         
-         <label for="passwd">비밀번호</label>
-         <input id="passwd" name="passwd" type="password"
-         size="20" placeholder="PASSWORD" maxlength="16">
-      </td>
-      <td width="150px" margin-right="40px" align="left">
-         <button id="login">로그인</button>
-      </td>
-      </tr>
-   </table>         
-   </div>
-   </div>
-   
-   <br/>
-   <div id="status">
-      <ul>
-         <li>관리자 로그인 성공!! 작업중...
-            <button id="logout">로그아웃</button>
-      </ul>
-   </div>
-   </body>
-</html>
+<p class="tip">Click on button in image container</p>
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome back,</h2>
+    <label>
+      <span>Email</span>
+      <input type="email" />
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" />
+    </label>
+    <p class="forgot-pass">Forgot password?</p>
+    <button type="button" class="submit">Sign In</button>
+    <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      <h2>Time to feel like home,</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" />
+      </label>
+      <button type="button" class="submit">Sign Up</button>
+      <button type="button" class="fb-btn">Join with <span>facebook</span></button>
+    </div>
+  </div>
+</div>
+
+<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+  <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+</a>
+<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+</a>
