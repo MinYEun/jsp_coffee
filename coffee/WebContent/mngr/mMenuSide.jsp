@@ -5,37 +5,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-	</script>
-	<script>
-		$(document).ready(function(){
-			$("#uplaod").on("change", loadFile);
-		});
-		function loadFile(event){
-			if(event.files && event.files[0]){
-				var reader = new FileReader();
-				reader.onload = function(e) {
-					$('#menu_img').attr('src', e.target.result);
-				}
-				reader.readAsDataURL(event.files[0]);
-			}
-		}
-	</script>
-	
 	<style>
+	html{      background-color: #ebdacf; overflow:hidden;}
+	
 	.outer{
-	  margin: 0 auto;
-      width: 1800px;
-      height: 900px;
+      width: 1885px;
+      height:980px;
       display: inline-block;
+      background-color: white;
+      margin-top: -9px;
+
       
 	}
 	.menu{
-		position: absolute;
+		position: fixed;
 		float: left;
+		
 
 	}
 	.menu_mn{
@@ -88,61 +73,78 @@
 		border-bottom: 1px solid brown;
 	}
 	.status{
-  		text-align: right;
+		text-align: right;
   		float: right;
   		width: 1500px;
   		height: 100px;
   		margin-top:10px;
+  		margin-right:10px;
+
 	}
-	.menu_add{
-		width: 1500px;
+	.menu_md{
+		width: 1400px;
 		height: 810px;
 		float: right;
 		position: relative;
+		overflow: auto;
+		margin-right: 100px;
 		
+	}
+
+	#menu_class{
+		width: 1400px;
+		position: relative;
+		margin-top:10px;
+		text-align: center;
+	}
+	#menu_class > button{
+		display: inline;
+		background-color: white;
+		color: black;
+		border: 2px solid black;
+		margin-right: 100px;
+		width: 200px;
+		height: 60px;
+		border-radius: 10px;	
+		font-weight: bold;
+		font-size: 25px;
+		margin-bottom: 40px;
+	}
+	#menu_class > button:hover {
+  		background-color: black;
+ 	    color: white;
+ 	    border: 2px solid white;
+  }
+	#menu_class > #side_menu{
+		background-color: black;
+		color: white;
+		border: 2px solid white;
 	}
 	#menu_image{
 		width: 240px;
-		height: 300px;
+		height: 310px;
 		border: 1px solid black;
 		position: relative;
 		display: inline-block;
-		margin-top: 200px;
-		margin-left: 500px;
+		margin-left: 100px;
 		text-align: center;
 	
+	}
+	.menu_img{
+		margin-left: 30px;
+		text-align: center;
+		float: left;
 	}
 	#menu_img{
 		max-width: 100%;
 		max-height: 100%
-		}
-	#file_up{
-		position: relative;
-		margin-top:10px;
-		margin-left: 510px;
-	}
-	#file_inf{
-		position: absolute;
-		margin-top: 197px;
-		margin-left: 40px;
-	}
-	#file_add{
-		position: relative;
-		margin-left: 120px;
-		width: 100px;
-		height: 30px;
-		border-radius: 10px;
-		background-color: black;
-		color: white;
-		border: none;
-		text-decoration: none;
 	}
 	h1 { letter-spacing: 5px;}
 	
 	.menu button{
 		background-color: #decac5;
 		border: 0px solid black;
-		font-size: 14px;
+		font-size: 12px;
 	}
 	</style>
 </head>
@@ -154,7 +156,7 @@
 			</div>
 			<div class="menu_mn">
 				<ul>
-					<li>메뉴관리
+					<li>메뉴관리</li>
 					<ul>
 						<li><button id="menu_add">추가</button>
 						<li><button id="menu_md">수정/삭제</button>
@@ -209,38 +211,26 @@
      	 xxx님 안녕하세요
       	<button id="logout"> 로그아웃</button>
    		 </div>
-		<div class="menu_add">
-			<h1>메뉴관리　　─　　추가</h1>
+		<div class="menu_md">
+			<h1>메뉴관리　　─　　수정/삭제</h1>
 			<hr/>
-			<div id="menu_image">
+			<div id="menu_class">
+				<button id="coffee">COFFEE</button>
+				<button id="smoothie">SMOOTHIE</button>
+				<button id="ade">ADE</button>
+				<button id="side_menu">SIDE MENU</button>
+			</div>
+			<div class="menu_img">
 				<img id="menu_img" src="http://placehold.it/240x300" ></img>
-			</div>
-			<span id="file_inf">
-				<select name="menu_Class">
-					<option>COFFEE</option>
-					<option>SMOOTHEI</option>
-					<option>ADE</option>
-					<option>SIDE MENU</option>
-				</select>
-				<br/>
-				<br/>
-       		    <input id="menu_name" name="menu_name" type="text" style="width:200px;
-        		height:20px;"
-        		 	maxlength="15" placeholder="메뉴 이름">
-        		<br/>
-				<br/>
-        		<input id="menu_pr" name="menu_pr" type="text" style="width:200px;
-        		height:20px;" maxlength="5" placeholder="메뉴 가격">
-        		<br/>
-				<br/>
-				<input id="menu_ex" name="menu_ex" type="text" style="width:200px; 
-						height:150px;" maxlength="50" placeholder="메뉴 설명">
-			</span>
-			<div id="file_up">
-				<input type="file" id="upload" multiple accept="image/*" onchange="loadFile(this);" ></input>
-				<input type="submit" id="file_add" value="메뉴추가" />
-			</div>
+				<br>
+				<input type="checkbox" id="menu_ch">메뉴 명</input>
+				<br>
+				<img id="menu_img" src="http://placehold.it/240x300" ></img>
+				<br>
+				<input type="checkbox" id="menu_ch">메뉴 명</input>
+				<br>
 
+			</div>
 			
 		</div>
 	</div>
