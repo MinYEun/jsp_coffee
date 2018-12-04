@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="/coffee/css/mLogin.css"/>
-<p class="tip">Click on button in image container</p>
+<div class="tip">
+	<img id="logo" width="250px" height="120px" alt="logo" src="/coffee/images/loginlogo.PNG" />
+</div>
 <div class="cont">
   <div class="form sign-in">
     <h2>Welcome back,</h2>

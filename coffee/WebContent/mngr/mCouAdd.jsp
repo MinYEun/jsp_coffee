@@ -3,7 +3,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mMenuSide.css"/>
+<link rel="stylesheet" href="/coffee/css/mCouAdd.css"/>
+
 
 	<div class="outer">
 		<span class="menu">
@@ -67,29 +68,20 @@
      	 xxx님 안녕하세요
       	<button id="logout"> 로그아웃</button>
    		 </div>
-		<div class="menu_md">
-			<h1>메뉴관리　　─　　수정/삭제</h1>
+		<div class="cou_add">
+			<h1>쿠폰관리　　─　　등록</h1>
 			<hr/>
-			<div id="menu_class">
-				<button id="coffee">COFFEE</button>
-				<button id="smoothie">SMOOTHIE</button>
-				<button id="ade">ADE</button>
-				<button id="side_menu">SIDE MENU</button>
-			</div>
-			<div class="menu_img">
-				<div id="m_img">
-					<img id="menu_img" src="http://placehold.it/240x300" ></img>
-					<br>
-					<input type="checkbox" id="menu_ch">메뉴 명</input>
-					<br>
+			<div id="coupon">
+				<div id="cou_image">
+					쿠폰은 어떻게...?
 				</div>
-				<div id="m_img">
-					<img id="menu_img" src="http://placehold.it/240x300" ></img>
-					<br>
-					<input type="checkbox" id="menu_ch">메뉴 명</input>
-					<br>
+				<div id="cou_inf">
+					<input type="text" placeholder="쿠폰 번호 입력" id="coupon_num" name="coupon_num" style="width:400px;
+        		height:40px;" />
+					<br />
+					<input type="text" placeholder="쿠폰 설명 입력" id="coupon_inf" name="coupon_inf" style="width:400px;
+        		height:100px;"/>
 				</div>
-
 			</div>
 			
 		</div>

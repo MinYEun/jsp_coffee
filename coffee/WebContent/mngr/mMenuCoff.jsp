@@ -1,154 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<style>
-	html{      background-color: #ebdacf; overflow:hidden;}
-	
-	.outer{
-      width: 1885px;
-      height:980px;
-      display: inline-block;
-      background-color: white;
-      margin-top: -9px;
 
-      
-	}
-	.menu{
-		position: fixed;
-		float: left;
-		
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" href="/coffee/css/mMenuCoff.css"/>
 
-	}
-	.menu_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-top: 1px solid brown;
-		border-bottom: 1px solid brown;
-	}
-	.cou_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.staff_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.cus_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.order_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.sal_mn{
-		width: 250px;
-		height: 135px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.status{
-		text-align: right;
-  		float: right;
-  		width: 1500px;
-  		height: 100px;
-  		margin-top:10px;
-  		margin-right:10px;
-
-	}
-	.menu_md{
-		width: 1400px;
-		height: 810px;
-		float: right;
-		position: relative;
-		overflow: auto;
-		margin-right: 100px;
-		
-	}
-
-	#menu_class{
-		width: 1400px;
-		position: relative;
-		margin-top:10px;
-		text-align: center;
-	}
-	#menu_class > button{
-		display: inline;
-		background-color: white;
-		color: black;
-		border: 2px solid black;
-		margin-right: 100px;
-		width: 200px;
-		height: 60px;
-		border-radius: 10px;	
-		font-weight: bold;
-		font-size: 25px;
-		margin-bottom: 40px;
-	}
-	#menu_class > button:hover {
-  		background-color: black;
- 	    color: white;
- 	    border: 2px solid white;
-  }
-	#menu_class > #side_menu{
-		background-color: black;
-		color: white;
-		border: 2px solid white;
-	}
-	#menu_image{
-		width: 240px;
-		height: 310px;
-		border: 1px solid black;
-		position: relative;
-		display: inline-block;
-		margin-left: 100px;
-		text-align: center;
-	
-	}
-	.menu_img{
-		margin-left: 30px;
-		text-align: center;
-		float: left;
-	}
-	#menu_img{
-		max-width: 100%;
-		max-height: 100%
-	}
-	h1 { letter-spacing: 5px;}
-	
-	.menu button{
-		background-color: #decac5;
-		border: 0px solid black;
-		font-size: 12px;
-	}
-	</style>
-</head>
-<body>
 	<div class="outer">
 		<span class="menu">
 			<div class="menulogo">
@@ -221,18 +77,20 @@
 				<button id="side_menu">SIDE MENU</button>
 			</div>
 			<div class="menu_img">
-				<img id="menu_img" src="http://placehold.it/240x300" ></img>
-				<br>
-				<input type="checkbox" id="menu_ch">메뉴 명</input>
-				<br>
-				<img id="menu_img" src="http://placehold.it/240x300" ></img>
-				<br>
-				<input type="checkbox" id="menu_ch">메뉴 명</input>
-				<br>
+				<div id="m_img">
+					<img id="menu_img" src="http://placehold.it/240x300" ></img>
+					<br>
+					<input type="checkbox" id="menu_ch">메뉴 명</input>
+					<br>
+				</div>
+				<div id="m_img">
+					<img id="menu_img" src="http://placehold.it/240x300" ></img>
+					<br>
+					<input type="checkbox" id="menu_ch">메뉴 명</input>
+					<br>
+				</div>
 
 			</div>
 			
 		</div>
 	</div>
-</body>
-</html>

@@ -3,7 +3,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mMenuSide.css"/>
+<link rel="stylesheet" href="/coffee/css/mStaffAdd.css"/>
+
 
 	<div class="outer">
 		<span class="menu">
@@ -67,29 +68,16 @@
      	 xxx님 안녕하세요
       	<button id="logout"> 로그아웃</button>
    		 </div>
-		<div class="menu_md">
-			<h1>메뉴관리　　─　　수정/삭제</h1>
+		<div class="staff_add">
+			<h1>직원관리　　─　　추가</h1>
 			<hr/>
-			<div id="menu_class">
-				<button id="coffee">COFFEE</button>
-				<button id="smoothie">SMOOTHIE</button>
-				<button id="ade">ADE</button>
-				<button id="side_menu">SIDE MENU</button>
-			</div>
-			<div class="menu_img">
-				<div id="m_img">
-					<img id="menu_img" src="http://placehold.it/240x300" ></img>
-					<br>
-					<input type="checkbox" id="menu_ch">메뉴 명</input>
-					<br>
+			<div id="staff">
+				<div id="logo">
+					<img id="logo" width="400px" height="120px" alt="logo" src="/coffee/images/loginlogo.PNG" />
 				</div>
-				<div id="m_img">
-					<img id="menu_img" src="http://placehold.it/240x300" ></img>
-					<br>
-					<input type="checkbox" id="menu_ch">메뉴 명</input>
-					<br>
+				<div id="staff_inf">
+					Staff Number<input type="text" id="stf_num" name="stf_num" style="width:200px; height:20px">
 				</div>
-
 			</div>
 			
 		</div>

@@ -1,150 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-	</script>
-	<script>
-		$(document).ready(function(){
-			$("#uplaod").on("change", loadFile);
-		});
-		function loadFile(event){
-			if(event.files && event.files[0]){
-				var reader = new FileReader();
-				reader.onload = function(e) {
-					$('#menu_img').attr('src', e.target.result);
-				}
-				reader.readAsDataURL(event.files[0]);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" href="/coffee/css/mMenuForm.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#uplaod").on("change", loadFile);
+	});
+	function loadFile(event){
+		if(event.files && event.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$('#menu_img').attr('src', e.target.result);
 			}
+			reader.readAsDataURL(event.files[0]);
 		}
-	</script>
+	}
+</script>
 	
-	<style>
-	.outer{
-	  margin: 0 auto;
-      width: 1800px;
-      height: 900px;
-      display: inline-block;
-      
-	}
-	.menu{
-		position: absolute;
-		float: left;
-
-	}
-	.menu_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-top: 1px solid brown;
-		border-bottom: 1px solid brown;
-	}
-	.cou_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.staff_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.cus_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.order_mn{
-		width: 250px;
-		height: 110px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.sal_mn{
-		width: 250px;
-		height: 135px;
-		background-color: #decac5;
-		padding-top: 20px;
-		margin: 0 auto;
-		border-bottom: 1px solid brown;
-	}
-	.status{
-  		text-align: right;
-  		float: right;
-  		width: 1500px;
-  		height: 100px;
-  		margin-top:10px;
-	}
-	.menu_add{
-		width: 1500px;
-		height: 810px;
-		float: right;
-		position: relative;
-		
-	}
-	#menu_image{
-		width: 240px;
-		height: 300px;
-		border: 1px solid black;
-		position: relative;
-		display: inline-block;
-		margin-top: 200px;
-		margin-left: 500px;
-		text-align: center;
 	
-	}
-	#menu_img{
-		max-width: 100%;
-		max-height: 100%
-		}
-	#file_up{
-		position: relative;
-		margin-top:10px;
-		margin-left: 510px;
-	}
-	#file_inf{
-		position: absolute;
-		margin-top: 197px;
-		margin-left: 40px;
-	}
-	#file_add{
-		position: relative;
-		margin-left: 120px;
-		width: 100px;
-		height: 30px;
-		border-radius: 10px;
-		background-color: black;
-		color: white;
-		border: none;
-		text-decoration: none;
-	}
-	h1 { letter-spacing: 5px;}
-	
-	.menu button{
-		background-color: #decac5;
-		border: 0px solid black;
-		font-size: 14px;
-	}
-	</style>
 </head>
 <body>
 	<div class="outer">
@@ -244,5 +119,3 @@
 			
 		</div>
 	</div>
-</body>
-</html>
