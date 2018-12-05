@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="/coffee/css/mStaffSelDel.css"/>
 <script>
 	var redata = prompt("직원 번호를 입력하세요." ,"Staff Number");
-	
 </script>
 <meta charset="UTF-8">
 <div class="stf_sd">

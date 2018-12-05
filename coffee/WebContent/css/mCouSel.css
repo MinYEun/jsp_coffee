@@ -1,0 +1,37 @@
+@charset "EUC-KR";
+
+h1{
+	letter-spacing: 5px;
+}
+.cou_sel{
+	width: 1400px;
+	height: 810px;
+	float: right;
+	position: relative;
+	overflow: hidden;
+}
+#coupon{
+	width: 60%;
+	height: 500px;
+	text-align: center;
+	margin-left:150px;
+	padding-top: 200px;
+}
+
+#cou_inf{
+		width: 600px;
+		height: 150px;
+		border: 2px solid black;
+		border-radius: 20px;
+		padding: 10px;
+		padding-top: 40px;
+		margin: 0 auto;
+}
+
+	
+#cou_inf > input{
+	margin: 10 0 10 0;
+}
+
+	
+
