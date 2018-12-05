@@ -1,96 +1,19 @@
 @charset "EUC-KR";
 
-<
+
 style>html {
 	background-color: #ebdacf;
 	overflow: hidden;
 }
 
-.outer {
-	width: 1885px;
-	height: 980px;
-	display: inline-block;
-	background-color: white;
-	margin-top: -9px;
-}
-
-.menu {
-	position: fixed;
-	float: left;
-}
-
-.menu_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-top: 1px solid brown;
-	border-bottom: 1px solid brown;
-}
-
-.cou_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
-
-.staff_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
-
-.cus_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
-
-.order_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
-
-.sal_mn {
-	width: 250px;
-	height: 135px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
-
-.status {
-	text-align: right;
-	float: right;
-	width: 1500px;
-	height: 100px;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.menu_md {
+.order_ade {
 	width: 50%;
 	height: 810px;
-	transform: translateX(30%);
+/* 	transform: translateX(30%); */
 	float: left;
 	position: relative;
 	overflow: auto;
-	margin-right: 100px;
+
 }
 
 #menu_class {
@@ -168,18 +91,22 @@ style>html {
 	width: 30%;
 	height: 80%;
 	float: right;
+	margin-top: 45px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
 }
 
 #btn_j {
+	width: 90px;
+	height: 50px;
 	border-radius: 5px;
 	background-color: white;
 	border: 2px solid black;
-	transform: translateY(2500%);
+	transform: translateY(1100%);
+	font-size: 18px;
 }
 
 .sum {
 	transform: translateY(2400%);
 }
-</
-style
->

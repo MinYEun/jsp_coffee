@@ -26,7 +26,10 @@ $(document).ready( function() {
   	});
   	  $("#cus_sd").on("click", function(){
   		  $(".ch_screen").load("mCusDel.jsp");
-  	 });
+  	});
+  	  $("#order_add").on("click", function(){
+  		  $(".ch_screen").load("mOrderCoffee.jsp");
+  	  })
 });
 
 $(document).ready( function() {
