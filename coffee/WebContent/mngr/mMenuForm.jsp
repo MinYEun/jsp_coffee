@@ -4,6 +4,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuForm.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/coffee/mngr/mMenu.js"></script>
+
 <script>
 	$(document).ready(function(){
 		$("#uplaod").on("change", loadFile);
@@ -18,10 +20,7 @@
 		}
 	}
 </script>
-	
-	
-</head>
-<body>
+
 	<div class="outer">
 		<span class="menu">
 			<div class="menulogo">
@@ -84,7 +83,7 @@
      	 xxx님 안녕하세요
       	<button id="logout"> 로그아웃</button>
    		 </div>
-		<div class="menu_add">
+		<div class="ch_screen">
 			<h1>메뉴관리　　─　　추가</h1>
 			<hr/>
 			<div id="menu_image">

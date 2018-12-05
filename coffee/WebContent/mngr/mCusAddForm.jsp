@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<<<<<<< HEAD
 	<link href="/coffee/css/mngr/mCusAddForm.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -67,6 +66,11 @@
 			</div>
 		</span>   		 
 		<div class="menu_add">
+=======
+	<link href="/coffee/css/mCusAddForm.css" rel="stylesheet" type="text/css">
+
+		<div class="ch_screen">
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<h1>고객관리　─　추가</h1>
 			<hr/>
        
@@ -100,5 +104,3 @@
        </div>
    </div>
 </div>
-</body>
-</html>

@@ -3,6 +3,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<<<<<<< HEAD
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuSide.css"/>
 
 	<div class="outer">
@@ -68,6 +69,12 @@
       	<button id="logout"> 로그아웃</button>
    		 </div>
 		<div class="menu_md">
+=======
+<link rel="stylesheet" href="/coffee/css/mMenuSide.css"/>
+<script src="/coffee/mngr/mMenu.js"></script>
+	
+		<div class="menu_side">
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<h1>메뉴관리　　─　　수정/삭제</h1>
 			<hr/>
 			<div id="menu_class">
