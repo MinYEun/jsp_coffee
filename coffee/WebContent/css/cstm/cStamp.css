@@ -1,0 +1,91 @@
+<
+style>html {
+	background-color: #ebdacf;
+	overflow: hidden;
+}
+
+.outer {
+	width: 1885px;
+	height: 980px;
+	display: inline-block;
+	background-color: white;
+	margin-top: -9px;
+}
+
+.menu {
+	position: fixed;
+	float: left;
+}
+
+.menu_mn {
+	width: 250px;
+	height: 110px;
+	background-color: #decac5;
+	padding-top: 20px;
+	margin: 0 auto;
+	border-top: 1px solid brown;
+	border-bottom: 1px solid brown;
+}
+
+.cou_mn {
+	width: 250px;
+	height: 110px;
+	background-color: #decac5;
+	padding-top: 20px;
+	margin: 0 auto;
+	border-bottom: 1px solid brown;
+}
+
+.status {
+	text-align: right;
+	float: right;
+	width: 1500px;
+	height: 100px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.menu_md {
+	width: 50%;
+	height: 810px;
+	transform: translateX(30%);
+	float: left;
+	position: relative;
+	overflow: auto;
+	margin-right: 100px;
+}
+
+.stamp_ck {
+	width: 600px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 40px;
+}
+
+.menu_md .stamp_ck {
+	margin: 0px auto;
+	margin-top: 8%;
+	text-align: center;
+}
+
+.menu_md #h1 {
+	margin-top: 15%;
+}
+
+.menu_md .exchange {
+	margin: 0px auto;
+	margin-top: 4%;
+	text-align: center;
+}
+
+.menu_md #btn_cg {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	width: 70px;
+	height: 30px;
+	font-weight: bold;
+}
+</
+style
+>

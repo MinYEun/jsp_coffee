@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mMenuForm.css"/>
+<link rel="stylesheet" href="/coffee/css/mngr/mMenuForm.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 	$(document).ready(function(){

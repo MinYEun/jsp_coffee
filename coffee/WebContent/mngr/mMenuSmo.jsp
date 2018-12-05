@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mMenuSmo.css"/>
+<link rel="stylesheet" href="/coffee/css/mngr/mMenuSmo.css"/>
 	<div class="outer">
 		<span class="menu">
 			<div class="menulogo">
