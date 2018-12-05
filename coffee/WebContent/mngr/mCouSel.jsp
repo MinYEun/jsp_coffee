@@ -1,24 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mCouSel.css"/>
-
-		<div class="cou_sel">
-			<h1>쿠폰관리　　─　　조회</h1>
-			<hr/>
-			<div id="coupon">
-				<div id="cou_image">
-					쿠폰은 어떻게...?
-				</div>
-				<div id="cou_inf">
-					<input type="text" placeholder="쿠폰 번호 입력" id="coupon_num" name="coupon_num" style="width:400px;
-        		height:40px;" />
-					<br />
-					<input type="text" placeholder="쿠폰 설명 입력" id="coupon_inf" name="coupon_inf" style="width:400px;
-        		height:100px;"/>
-				</div>
-			</div>
-			
+<link rel="stylesheet" href="/coffee/css/mCouSel.css" />
+<div class="cou_sel">
+	<h1>쿠폰관리 ─ 조회</h1>
+	<hr />
+	<div id="coupon">
+		<div id="cou_inf">
+				Coupon Number <input type="text" id="cou_num" name="cou_num"
+							style="width: 150px; height: 20px"> <br /> 
+				explanation <input type="text" id="cou_exp" name="cou_exp"
+							style="width: 150px; height: 20px">
 		</div>
+	</div>
+</div>

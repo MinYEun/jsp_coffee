@@ -10,7 +10,10 @@ $(document).ready( function() {
         $(".ch_screen").load("mMenuCoff.jsp");
     });
   	  $("#cou_add").on("click", function() {
-          $(".ch_screen").load("mCouAdd.jsp");
+         $(".ch_screen").load("mCouAdd.jsp");
+    });
+  	  $("#cou_sd").on("click", function() {
+  		 $(".ch_screen").load("mCouSel.jsp");
     });
   	  $("#staff_add").on("click", function() {
         $(".ch_screen").load("mStaffAdd.jsp");
@@ -22,16 +25,16 @@ $(document).ready( function() {
 
 $(document).ready( function() {
 	  $("#coffee").on("click", function() {
-      $(".ch_screen").load("mMenuCoff.jsp");
+		  $(".ch_screen").load("mMenuCoff.jsp");
   });
 	  $("#smoothie").on("click", function() {
-        $(".ch_screen").load("mMenuSmo.jsp");
+		  $(".ch_screen").load("mMenuSmo.jsp");
   });
 	  $("#ade").on("click", function() {
-      $(".ch_screen").load("mMenuAde.jsp");
+		  $(".ch_screen").load("mMenuAde.jsp");
   });
 	  $("#side_menu").on("click", function() {
-      $(".ch_screen").load("mMenuSide.jsp");
+		  $(".ch_screen").load("mMenuSide.jsp");
   });
 });
 

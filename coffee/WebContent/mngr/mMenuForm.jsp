@@ -40,7 +40,7 @@
 					<li>쿠폰관리
 					<ul>
 						<li><button id="cou_add">쿠폰 등록</button>
-						<li><button id="cou_sd">쿠폰 조회/삭제</button>
+						<li><button id="cou_sd">쿠폰 조회</button>
 					</ul>
 				</ul>
 			</div>
