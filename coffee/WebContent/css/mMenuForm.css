@@ -17,6 +17,12 @@ html{
 		float: left;
 		height: 100%;
 	}
+	
+	.menu button{
+		background-color: #decac5;
+		border: 0px solid black;
+		font-size: 14px;
+	}
 	.menu_mn{
 		width: 250px;
 		height: 110px;
@@ -75,11 +81,15 @@ html{
   		margin-right:10px;
 
 	}
-	.menu_add{
-		width: 1500px;
+	.ch_screen{
+		width: 1400px;
 		height: 810px;
 		float: right;
 		position: relative;
+		overflow: auto;
+		margin-right: 50px;
+		padding-left: 50px;
+
 		
 	}
 	#menu_image{
@@ -89,7 +99,7 @@ html{
 		position: relative;
 		display: inline-block;
 		margin-top: 200px;
-		margin-left: 500px;
+		margin-left: 450px;
 		text-align: center;
 	
 	}
@@ -100,7 +110,7 @@ html{
 	#file_up{
 		position: relative;
 		margin-top:10px;
-		margin-left: 510px;
+		margin-left: 460px;
 	}
 	#file_inf{
 		position: absolute;
@@ -120,8 +130,4 @@ html{
 	}
 	h1 { letter-spacing: 5px;}
 	
-	.menu button{
-		background-color: #decac5;
-		border: 0px solid black;
-		font-size: 14px;
-	}
+	
