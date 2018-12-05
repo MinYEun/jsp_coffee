@@ -41,7 +41,7 @@ public class MngrDBBean {
 
 			String orgPass = passwd;
 			
-			pstmt = conn.prepareStatement("select managerPasswd from manager where managerId = ?");
+			pstmt = conn.prepareStatement("select managerPasswd from mcoffee where managerId = ?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 

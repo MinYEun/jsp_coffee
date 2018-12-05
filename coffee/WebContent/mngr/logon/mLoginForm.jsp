@@ -4,9 +4,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
-<script src="/coffee/mngr/logon/mlogin.js"></script>
-<link rel="stylesheet" href="/coffee/css/mngr/mLogin.css"/>
-
+<script src="/shoppingmall/mngr/logon/mlogin.js"></script>
+	
 <c:if test="${empty sessionScope.id }">
 	<div class="tip">
 		<img id="logo" width="250px" height="120px" alt="logo"
