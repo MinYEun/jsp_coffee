@@ -95,12 +95,11 @@ html{
 	#menu_image{
 		width: 240px;
 		height: 300px;
-		border: 1px solid black;
-		position: relative;
 		display: inline-block;
 		margin-top: 200px;
 		margin-left: 450px;
 		text-align: center;
+
 	
 	}
 	#menu_img{
@@ -119,7 +118,7 @@ html{
 	}
 	#file_add{
 		position: relative;
-		margin-left: 120px;
+		margin-left: 110px;
 		width: 100px;
 		height: 30px;
 		border-radius: 10px;
