@@ -21,6 +21,9 @@ $(document).ready( function() {
   	  $("#staff_sd").on("click", function() {
         $(".ch_screen").load("mStaffSelDel.jsp");
     });
+  	  $("#cus_add").on("click", function(){
+  		  $(".ch_screen").load("mCusAddForm.jsp");
+  	  })
 });
 
 $(document).ready( function() {

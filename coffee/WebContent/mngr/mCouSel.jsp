@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mCouSel.css" />
 <div class="cou_sel">
-	<h1>쿠폰관리 ─ 조회</h1>
+	<h1>쿠폰관리　　─　　조회</h1>
 	<hr />
 	<div id="coupon">
 		<div id="cou_inf">
