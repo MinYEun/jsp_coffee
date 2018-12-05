@@ -11,11 +11,11 @@
 	}
 	
 	#coupon{
-	width: 60%;
-	height: 500px;
-	text-align: center;
-	margin-left:150px;
-	padding-top: 50px;
+		width: 60%;
+		height: 500px;
+		text-align: center;
+		margin-left:150px;
+		padding-top: 50px;
 	}
 	
 	#cou_image{
