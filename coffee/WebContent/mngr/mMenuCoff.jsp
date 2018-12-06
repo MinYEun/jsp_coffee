@@ -9,7 +9,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="/coffee/css/mMenuCoff.css"/>
 <script src="/coffee/mngr/mMenu.js"></script>
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 
 
 		<div class="menu_coff">

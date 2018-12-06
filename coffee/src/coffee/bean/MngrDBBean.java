@@ -66,4 +66,7 @@ public class MngrDBBean {
 		}
 		return x;
 	}
+	
+	// 관리자 직원 등급 체크하는 메소드
+	
 }

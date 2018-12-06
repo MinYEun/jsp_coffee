@@ -19,12 +19,3 @@
 			<button type="button" id="login">Sign In</button>
 		</div>
 </c:if>
-
-<c:if test="${!empty sessionScope.id }">
-	<div id="status">
-		<ul>
-			<li>로그인 성공 왜 근데 2번뜨냐?
-			<button id="logout">로그아웃</button>
-		</ul>
-	</div>
-</c:if>
