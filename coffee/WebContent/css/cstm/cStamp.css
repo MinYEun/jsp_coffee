@@ -1,9 +1,8 @@
-<
-style>html {
-	background-color: #ebdacf;
-	overflow: hidden;
-}
 
+html{
+	overflow-y:hidden;
+	}
+	
 .outer {
 	width: 1885px;
 	height: 980px;
@@ -12,14 +11,21 @@ style>html {
 	margin-top: -9px;
 }
 
+.menu button{
+	background-color: #decac5;
+	border: 0px solid black;
+	font-size: 14px;
+}
+
 .menu {
 	position: fixed;
 	float: left;
+	height: 100%;
 }
 
-.menu_mn {
+.point {
 	width: 250px;
-	height: 110px;
+	height: 900px;;
 	background-color: #decac5;
 	padding-top: 20px;
 	margin: 0 auto;
@@ -27,14 +33,6 @@ style>html {
 	border-bottom: 1px solid brown;
 }
 
-.cou_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
 
 .status {
 	text-align: right;
@@ -45,14 +43,14 @@ style>html {
 	margin-right: 10px;
 }
 
-.menu_md {
-	width: 50%;
+.ch_screen {
+	width: 1400px;
 	height: 810px;
-	transform: translateX(30%);
-	float: left;
+	float: right;
 	position: relative;
 	overflow: auto;
-	margin-right: 100px;
+	margin-right: 50px;
+	padding-left: 50px;
 }
 
 .stamp_ck {
@@ -60,32 +58,29 @@ style>html {
 	height: 300px;
 	border: 1px solid black;
 	border-radius: 40px;
-}
-
-.menu_md .stamp_ck {
-	margin: 0px auto;
-	margin-top: 8%;
 	text-align: center;
+	margin-top: 100px;
+	margin-left: 300px;
+	vertical-align: middle;
 }
 
-.menu_md #h1 {
+.menu_md h1 {
 	margin-top: 15%;
 }
 
-.menu_md .exchange {
+.exchange {
 	margin: 0px auto;
 	margin-top: 4%;
-	text-align: center;
+	margin-left: 550px;
 }
 
-.menu_md #btn_cg {
-	background-color: white;
-	border: 1px solid black;
-	color: black;
-	width: 70px;
+#btn_cg {
+	position: relative;
+	width: 100px;
 	height: 30px;
-	font-weight: bold;
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	border: none;
+	text-decoration: none;
 }
-</
-style
->

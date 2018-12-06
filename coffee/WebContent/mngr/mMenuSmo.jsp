@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuSmo.css"/>
-<script src="/coffee/mngr/mMenu.js"></script>
+<script src="/coffee/js/mMenu.js"></script>
 	
 		<div class="menu_smo">
 			<h1>메뉴관리　　─　　수정/삭제</h1>

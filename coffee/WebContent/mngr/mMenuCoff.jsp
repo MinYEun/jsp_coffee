@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuCoff.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/coffee/mngr/mMenu.js"></script>
+<script src="/coffee/js/mMenu.js"></script>
 
 
 		<div class="menu_coff">
