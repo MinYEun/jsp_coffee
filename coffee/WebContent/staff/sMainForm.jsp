@@ -28,7 +28,7 @@
  			reader.readAsDataURL(event.files[0]);
  		} 
  	} 
-<</script> 
+</script> 
 
 	<div class="outer">
 		<span class="menu">
