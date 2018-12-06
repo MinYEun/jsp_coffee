@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<link href="/coffee/css/mngr/mCusAddForm.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link href="/coffee/css/mngr/mCusAddForm.css" rel="stylesheet"
+	type="text/css">
 </head>
 <body>
 	<div class="outer">
 		<span class="menu">
 			<div class="menulogo">
-				<img width="250px" height="120px" alt="logo" src="/coffee/images/coffee.jpg" />		
+				<img width="250px" height="120px" alt="logo"
+					src="/coffee/images/coffee.jpg" />
 			</div>
 			<div class="menu_mn">
 				<ul>
@@ -65,51 +65,50 @@
 					</ul>
 				</ul>
 			</div>
-		</span>   		 
+		</span>
 		<div class="menu_add">
-=======
-	<link href="/coffee/css/mCusAddForm.css" rel="stylesheet" type="text/css">
-=======
-	<link href="/coffee/css/mCusAddForm.css" rel="stylesheet" />
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
+			=======
+			<link href="/coffee/css/mCusAddForm.css" rel="stylesheet"
+				type="text/css">
+			=======
+			<link href="/coffee/css/mCusAddForm.css" rel="stylesheet" />
+			>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 
-<<<<<<< HEAD
-		<div class="ch_screen">
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
-			<h1>고객관리　─　추가</h1>
-			<hr/>
-=======
-	<div class="cus_add">
-		<h1>고객관리　─　추가</h1>
-		<hr/>
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
-       
-       	 <div id="logo_img">
-           	 <img src="/coffee/images/coffee.jpg" alt="logo" width="350px" height="200px"/>
-		 </div>
-	
+			<<<<<<< HEAD
+			<div class="ch_screen">
+				>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
+				<h1>고객관리 ─ 추가</h1>
+				<hr />
+				=======
+				<div class="cus_add">
+					<h1>고객관리 ─ 추가</h1>
+					<hr />
+					>>>>>>> branch 'master' of
+					https://github.com/MinYEun/jsp_coffee.git
 
-        <div class="inner">
-       		<table height="200px" align="center">
-      			<tr>
-      			<td width="150px" align="center">
-       			  <img width="150px" height="80px" src="/coffee/images/login2.png">
-     			</td>
-         
-      			<td width="300px">
-					<label for="phone">핸드폰</label>
-					<input id="phone" name="phone" type="text" size="25" maxlength="50" placeholder=" PHONE">
-					<br /><br />
-         
-				<label for="name">이　름</label>
-				<input id="name" name="name" type="text" size="25" 
-						placeholder=" NAME" maxlength="16">
-				</td>
-				
-				<td width="150px" margin-right="40px" align="left">
-					<button id="login">추가</button>
-				</td>
-				</tr>
-			</table>         
-       </div>
-   </div>
+					<div id="logo_img">
+						<img src="/coffee/images/coffee.jpg" alt="logo" width="350px"
+							height="200px" />
+					</div>
+
+
+					<div class="inner">
+						<table height="200px" align="center">
+							<tr>
+								<td width="150px" align="center"><img width="150px"
+									height="80px" src="/coffee/images/login2.png"></td>
+
+								<td width="300px"><label for="phone">핸드폰</label> <input
+									id="phone" name="phone" type="text" size="25" maxlength="50"
+									placeholder=" PHONE"> <br />
+								<br /> <label for="name">이 름</label> <input id="name"
+									name="name" type="text" size="25" placeholder=" NAME"
+									maxlength="16"></td>
+
+								<td width="150px" margin-right="40px" align="left">
+									<button id="login">추가</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
