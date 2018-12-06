@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/coffee/css/mStaffSelDel.css"/>
+<link rel="stylesheet" href="/coffee/css/mngr/mStaffSelDel.css"/>
 <script>
 	var redata = prompt("직원 번호를 입력하세요." ,"Staff Number");
 </script>

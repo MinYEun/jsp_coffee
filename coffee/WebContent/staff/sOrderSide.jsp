@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link href="/coffee/css/mngr/mOrderSide.css" rel="stylesheet" type="text/css">
-<script src="/coffee/js/mOrder.js"></script>
+<link href="/coffee/css/staff/sOrderSide.css" rel="stylesheet" type="text/css">
+<script src="/coffee/js/sMenu.js"></script>
 
 		<div class="order_s_m">
 			<h1>주문관리　　─　　추가</h1>

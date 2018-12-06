@@ -2,9 +2,10 @@
     pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<<<<<<< HEAD
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuAde.css"/>
+<script src="/coffee/js/mMenu.js"></script>
 
+<<<<<<< HEAD
 	<div class="outer">
 		<span class="menu">
 			<div class="menulogo">
@@ -72,6 +73,8 @@
 <link rel="stylesheet" href="/coffee/css/mMenuAde.css"/>
 <script src="/coffee/mngr/mMenu.js"></script>
 	
+=======
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 		<div class="menu_ade">
 			<h1>메뉴관리　　─　　수정/삭제</h1>
 			<hr/>

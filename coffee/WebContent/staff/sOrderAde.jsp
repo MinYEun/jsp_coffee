@@ -3,8 +3,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link href="/coffee/css/mngr/mOrderAde.css" rel="stylesheet" type="text/css">
-<script src="/coffee/js/mOrder.js"></script>
+<link href="/coffee/css/staff/sOrderAde.css" rel="stylesheet" type="text/css">
+<script src="/coffee/js/sOrder.js"></script>
 	
 		<div class="order_ade">
 			<h1>주문관리　　─　　추가</h1>

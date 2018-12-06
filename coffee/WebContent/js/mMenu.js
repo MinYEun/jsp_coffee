@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$("#menu_add").click(function(){ //[상품등록] 버튼 클릭
-		window.location.href = "/coffee/mngr/mMenuForm.jsp";
+	$("#order_add").click(function(){ //[상품등록] 버튼 클릭
+		window.location.href = "/coffee/mngr/mMainForm.jsp";
 	});
 });
 	
@@ -26,7 +26,10 @@ $(document).ready( function() {
   	});
   	  $("#cus_sd").on("click", function(){
   		  $(".ch_screen").load("mCusDel.jsp");
-  	 });
+  	});
+  	  $("#menu_add").on("click", function(){
+  		  $(".ch_screen").load("mMenuAdd.jsp");
+  	  });
 });
 
 $(document).ready( function() {
