@@ -4,7 +4,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
-<script src="/shoppingmall/mngr/logon/mlogin.js"></script>
+<script src="/coffee/mngr/logon/mlogin.js"></script>
 	
 <c:if test="${empty sessionScope.id }">
 	<div class="tip">
@@ -23,7 +23,7 @@
 <c:if test="${!empty sessionScope.id }">
 	<div id="status">
 		<ul>
-			<li>관리자 로그인 성공!!. 작업중...
+			<li>로그인 성공 왜 근데 2번뜨냐?
 			<button id="logout">로그아웃</button>
 		</ul>
 	</div>

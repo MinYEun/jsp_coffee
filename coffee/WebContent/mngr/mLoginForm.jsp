@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -24,8 +24,8 @@
 <c:if test="${!empty sessionScope.id }">
 	<div id="status">
 		<ul>
-			<li>관리자 로그인 성공!!. 작업중...
+			<li>관리자 로그인 성공!
 			<button id="logout">로그아웃</button>
 		</ul>
 	</div>
-</c:if>
+</c:if> --%>

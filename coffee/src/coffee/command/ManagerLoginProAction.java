@@ -16,15 +16,16 @@ public class ManagerLoginProAction implements CommandAction {
         //넘어온 요청의 데이터를 얻어냄
         String id = request.getParameter("id");
 	    String passwd  = request.getParameter("passwd");
-
+	    
 	    //DB와 연동해서 사용자의 인증을 처리
 	    MngrDBBean dbPro = MngrDBBean.getInstance();
         int check = dbPro.userCheck(id,passwd);
-
         //해당 뷰(응답페이지)로 보낼 내용을 request속성에 지정
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
-		
+		request.getSession().setAttribute("id", id);
+		System.out.println(id);
+		System.out.println("LoginProAction");
 		return "/mngr/logon/mLoginPro.jsp";
 	}
 }

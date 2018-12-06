@@ -11,7 +11,8 @@ public class ManagerMainAction implements CommandAction {
 		// TODO Auto-generated method stub
 		
 		//관리자를 구분할 때 사용
-	
-		return "/mngr/mLoginForm.jsp";//응답페이지
+		System.out.println("mainAction");
+		return "/mngr/mOrderCoffee.jsp";//로그인 성공하면 주문 화면으로
+		
 	}
 }

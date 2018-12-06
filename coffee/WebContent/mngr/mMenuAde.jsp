@@ -73,7 +73,6 @@
 <script src="/coffee/mngr/mMenu.js"></script>
 	
 		<div class="menu_ade">
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<h1>메뉴관리　　─　　수정/삭제</h1>
 			<hr/>
 			<div id="menu_class">
