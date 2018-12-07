@@ -6,7 +6,7 @@ $(document).ready(function() {
 			type : "POST",
 			url : "/coffee/mg/managerLogout.do",
 			success : function(data) {
-				window.location.href = "/coffee/Start.do";
+				window.location.href = "/coffee/Login.jsp";
 			}
 		});
 	});

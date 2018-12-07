@@ -13,8 +13,7 @@
 	</div>
 	<div class="status">
 		<h2>Welcome back!!</h2>
-		
-		<label> <span>Email</span>
+		<label> <span>Staff_code</span>
 		<input id="id" type="text" /></label>
 		<label><span>Password</span>
 			<input id="passwd" type="password" />

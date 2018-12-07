@@ -8,7 +8,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
-<script src="/coffee/Start.js"></script>
 <script src="/coffee/main.js"></script>
 <title>main.jsp</title>
 </head>
@@ -111,11 +110,11 @@
 			<div id="content" class="box2"></div>
 		</div>
 	</c:if>
-<%-- 	
+
 	<!-- 로그인 실패 -->
 	<c:if test="${type == 2 }">
 		<c:forward  page="/coffee/Login.jsp"/>
-	</c:if>	 --%>
+	</c:if>
 
 	<!-- cont 부분 -->
 	<c:if test="${not empty cont}">

@@ -12,6 +12,6 @@ public class ManagerLogoutAction implements CommandAction {
 		request.getSession().removeAttribute("id");
 		request.getSession().removeAttribute("name");
 		
-		return "/mngr/logon/mLogout.jsp";
+		return "/Logout.jsp";
 	}
 }

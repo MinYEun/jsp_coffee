@@ -11,7 +11,6 @@ $(document).ready(function() {
 			url : "/coffee/index.do",
 			data : query,
 			success : function(data){
-				alert("로그인 성공");
 				window.location.href="/coffee/mOrderCoffee.do";
 			}
 		});
