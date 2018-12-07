@@ -1,10 +1,12 @@
 @charset "EUC-KR";
 
-html {
+html, body {
+	width: 100%;
 	overflow-y: hidden;
 }
 
-.outer {
+
+.ordercoff {
 	width: 1500px;
 	height: 980px;
 	transform: translatex(20%);

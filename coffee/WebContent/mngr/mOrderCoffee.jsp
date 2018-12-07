@@ -10,7 +10,7 @@
 	<jsp:forward page="/Start.jsp" />
 </c:if>
 <c:if test="${not empty sessionScope.id }">
-	<div class="outer">
+	<div class="ordercoff">
 		<div class="menu_md">
 			<h1>메뉴관리 ─ 수정/삭제</h1>
 			<hr />
@@ -85,5 +85,5 @@
 			<button id="btn_j" type="submit">적립</button>
 			<button id="btn_j" type="submit">쿠폰</button>
 		</div>
-	</div>
+
 </c:if>
