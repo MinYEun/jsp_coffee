@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+
 
 public class MngrDBBean {
 	// MngrDBBean 전역 객체 생성 <-- 한 개의 객체만 생성해서 공유
@@ -15,6 +18,10 @@ public class MngrDBBean {
 
 	// MngrDBBean 객체를 리턴하는 메소드
 	public static MngrDBBean getInstance() {
+		//login시 세션에 등록
+		MngrDBBean dbPro = MngrDBBean.getInstance();
+			HttpSession session = request.getSession();
+			session.setAttribute("menu", dbPro.getMenuList());
 		return instance;
 	}
 
@@ -68,5 +75,51 @@ public class MngrDBBean {
 	}
 	
 	// 관리자 직원 등급 체크하는 메소드
+	
+	
+	// 메뉴 세션 저장
+	public ArrayList<MenuBean> getMenuList(){
+		ArrayList<MenuBean> list = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Connection conn = null;
+	
+		try {
+		Context initCtx = new InitialContext();
+		Context envCtx = (Context) initCtx.lookup("java:comp/env");
+		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
+		conn = ds.getConnection();
+		list = new ArrayList<>();
+		
+		String sql = "select * from menu";
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()) {
+			MenuBean m = new MenuBean();
+			m.setMenu_code(rs.getString("_id"));
+			m.setClass_code(rs.getString("detail"));
+			m.setMenu_name(rs.getString("done"));
+			m.setPrice(rs.getInt("Price"));
+			m.setImg(rs.getString("img"));
+			list.add(m);
+		}
+		
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally{
+			if(rs!=null)
+				try{rs.close();}catch(SQLException sqle){}
+			if(pstmt!=null)
+				try{pstmt.close();}catch(SQLException sqle){}
+			if(conn!=null)
+				try{conn.close();}catch(SQLException sqle){}
+		}
+		return list;
+	
+	}
+	
+
 	
 }
