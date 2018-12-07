@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="/coffee/css/mngr/mStaffSelDel.css" />
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="/coffee/mngr/mStaffDel.js"></script>
 
 <meta charset="UTF-8">
 <div class="stf_sd">
@@ -18,7 +20,8 @@
 				<c:forEach var="e" items="${sessionScope.staffList}">
 					<tr>
 						<td class="elist"><input class="check" type="radio"
-							name="check" value="${e.stf_code}"></td>
+							name="check"
+							id="radio_id" value="${e.stf_code}"></td>
 						<td class="elist">${e.name}</td>
 						<td class="elist">${e.passwd}</td>
 						<td class="elist">${e.ph_num}</td>

@@ -43,8 +43,6 @@ $(document).ready(function() {
 		$.ajax({
 			type : "post",
 			url : "/coffee/mStaffSelDel.do",
-			data : query,
-			
 			success : function(data) {
 				window.location.href = "/coffee/mStaffSelDel.do";
 			}

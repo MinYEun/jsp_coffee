@@ -10,13 +10,9 @@
 	<jsp:forward page="/Start.jsp" />
 </c:if>
 <c:if test="${not empty sessionScope.id }">
-	<div class="ordercoff">
+	<!-- <div class="ordercoff">
 		<div class="menu_md">
-<<<<<<< HEAD
-			<h1>주문관리 ─ 추가</h1>
-=======
 			<h1>주문관리　　─　　추가</h1>
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<hr />
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>
@@ -46,7 +42,7 @@
 				</div>
 			</div>
 			<br>
-			<!-------------------------------------------------------------------->
+			----------------------------------------------------------------
 		</div>
 		<div class="order_list">
 			<div id="list">
@@ -70,6 +66,6 @@
 			<div id="etc">
 				<button id="btn_j" type="submit">적립</button>
 			</div>
-		</div>
+		</div> -->
 
 </c:if>

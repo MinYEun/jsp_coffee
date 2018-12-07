@@ -10,13 +10,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
-
-<<<<<<< HEAD
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-=======
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 
 public class MngrDBBean {
 	// MngrDBBean 전역 객체 생성 <-- 한 개의 객체만 생성해서 공유
@@ -24,10 +19,6 @@ public class MngrDBBean {
 
 	// MngrDBBean 객체를 리턴하는 메소드
 	public static MngrDBBean getInstance() {
-		//login시 세션에 등록
-		MngrDBBean dbPro = MngrDBBean.getInstance();
-			HttpSession session = request.getSession();
-			session.setAttribute("menu", dbPro.getMenuList());
 		return instance;
 	}
 
@@ -79,7 +70,7 @@ public class MngrDBBean {
 		}
 		return x;
 	}
-<<<<<<< HEAD
+
 
 	// 관리자, 직원 추가
 	public void insertStaff(String id, String name, String pw, String tel) {
@@ -176,60 +167,82 @@ public class MngrDBBean {
 				try {conn.close();} catch (SQLException ex) {}
 		}
 		return jsonArray;
-
 	}
-}
 
-// 관리자 직원 등급 체크하는 메소드
-=======
+	public void deleteStaff(String id){
+	        Connection conn = null;
+	        PreparedStatement pstmt = null;
+	        ResultSet rs= null;
+	        int x=-1;
+		
+	        try {
+				conn = getConnection();
+
+					pstmt = conn.prepareStatement("delete from staff where stf_code = ?");
+					pstmt.setString(1, id);
+					pstmt.executeUpdate();
+
+	        } catch(Exception ex) {
+	        	ex.printStackTrace();
+	        } finally {
+	        	if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+	        	if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+	        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+	        }
+	        System.out.println("deleteStaff_x: " + x);
+	}
+	
+
+	// 관리자 직원 등급 체크하는 메소드
+
 	
 	// 관리자 직원 등급 체크하는 메소드
 	
 	
 	// 메뉴 세션 저장
-	public ArrayList<MenuBean> getMenuList(){
-		ArrayList<MenuBean> list = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		Connection conn = null;
-	
-		try {
-		Context initCtx = new InitialContext();
-		Context envCtx = (Context) initCtx.lookup("java:comp/env");
-		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
-		conn = ds.getConnection();
-		list = new ArrayList<>();
-		
-		String sql = "select * from menu";
-		pstmt = conn.prepareStatement(sql);
-		rs = pstmt.executeQuery();
-		
-		while(rs.next()) {
-			MenuBean m = new MenuBean();
-			m.setMenu_code(rs.getString("_id"));
-			m.setClass_code(rs.getString("detail"));
-			m.setMenu_name(rs.getString("done"));
-			m.setPrice(rs.getInt("Price"));
-			m.setImg(rs.getString("img"));
-			list.add(m);
-		}
-		
-		
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally{
-			if(rs!=null)
-				try{rs.close();}catch(SQLException sqle){}
-			if(pstmt!=null)
-				try{pstmt.close();}catch(SQLException sqle){}
-			if(conn!=null)
-				try{conn.close();}catch(SQLException sqle){}
-		}
-		return list;
-	
-	}
+//	public ArrayList<MenuBean> getMenuList(){
+//		ArrayList<MenuBean> list = null;
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//		Connection conn = null;
+//	
+//		try {
+//		Context initCtx = new InitialContext();
+//		Context envCtx = (Context) initCtx.lookup("java:comp/env");
+//		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
+//		conn = ds.getConnection();
+//		list = new ArrayList<>();
+//		
+//		String sql = "select * from menu";
+//		pstmt = conn.prepareStatement(sql);
+//		rs = pstmt.executeQuery();
+//		
+//		while(rs.next()) {
+//			MenuBean m = new MenuBean();
+//			m.setMenu_code(rs.getString("_id"));
+//			m.setClass_code(rs.getString("detail"));
+//			m.setMenu_name(rs.getString("done"));
+//			m.setPrice(rs.getInt("Price"));
+//			m.setImg(rs.getString("img"));
+//			list.add(m);
+//		}
+//		
+//		
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}finally{
+//			if(rs!=null)
+//				try{rs.close();}catch(SQLException sqle){}
+//			if(pstmt!=null)
+//				try{pstmt.close();}catch(SQLException sqle){}
+//			if(conn!=null)
+//				try{conn.close();}catch(SQLException sqle){}
+//		}
+//		return list;
+//	
+//	}
 	
 
 	
 }
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
+
