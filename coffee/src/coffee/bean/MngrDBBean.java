@@ -46,9 +46,6 @@ public class MngrDBBean {
 
 			String orgPass = passwd;
 			
-			pstmt = conn.prepareStatement("select passwd from staff where name = ?");
-			pstmt.setString(1, name);
-
 			pstmt = conn.prepareStatement("select passwd from staff where stf_code = ?");
 			pstmt.setString(1, name);
 			rs = pstmt.executeQuery();

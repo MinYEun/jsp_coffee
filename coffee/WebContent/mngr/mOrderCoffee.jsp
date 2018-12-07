@@ -12,11 +12,7 @@
 <c:if test="${not empty sessionScope.id }">
 	<div class="ordercoff">
 		<div class="menu_md">
-<<<<<<< HEAD
-			<h1>주문관리 ─ 추가</h1>
-=======
 			<h1>주문관리　　─　　추가</h1>
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<hr />
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>
@@ -46,11 +42,12 @@
 <!-- 				</div> -->
 		
 					<c:forEach var="m" items="${menu}">
-    					  <div id="customerlist">
-      					  <div class="customer">${m.menu_code}</div>
-         				  <div class="customer">${m.menu_name}</div>
-         				  <div class="customer">${m.cus_mile}</div>
-       					  <div class="customer">${m.cus_regdate}</div>
+    					  <div id="menulist">
+      					  <div class="menu_code">${m.menu_code}</div>
+      					  <div class="class_code">${m.class_code}</div>
+         				  <div class="menu_name">${m.menu_name}</div>
+         				  <div class="price">${m.priice}</div>
+       					  <div class="img">${m.img}</div>
     				  </div>
       </c:forEach>
 				
