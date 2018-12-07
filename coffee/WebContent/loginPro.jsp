@@ -4,5 +4,5 @@
 
 <c:if test="${check == 1}">
 	<c:set var="id" value="${id}" scope="session"/>
-	<c:set var="type" value="${check}" scope="session"/>
+	<c:set var="type" value="${type}" scope="session"/>
 </c:if>

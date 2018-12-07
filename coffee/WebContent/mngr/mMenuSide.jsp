@@ -7,7 +7,7 @@
 <script src="/coffee/js/mMenu.js"></script>
 	
 		<div class="menu_side">
-			<h1>메뉴관리　　─　　수정/삭제</h1>
+			<h1>메뉴관리　　─　　수정/삭제S</h1>
 			<hr/>
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>

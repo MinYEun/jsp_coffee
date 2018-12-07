@@ -12,7 +12,11 @@
 <c:if test="${not empty sessionScope.id }">
 	<div class="ordercoff">
 		<div class="menu_md">
+<<<<<<< HEAD
+			<h1>주문관리 ─ 추가</h1>
+=======
 			<h1>주문관리　　─　　추가</h1>
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<hr />
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>

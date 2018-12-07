@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	매출 관리 페이지 -- 작업중
+	<div id="a">
+		<h1>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		매출 관리 페이지 -- 작업중
+		</h1>
+		
+	</div>
 </body>
 </html>
