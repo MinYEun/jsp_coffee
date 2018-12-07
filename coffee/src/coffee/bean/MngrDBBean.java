@@ -9,6 +9,10 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+
 public class MngrDBBean {
 	// MngrDBBean 전역 객체 생성 <-- 한 개의 객체만 생성해서 공유
 	private static MngrDBBean instance = new MngrDBBean();
@@ -58,25 +62,16 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		} finally {
 			if (rs != null)
-				try {
-					rs.close();
-				} catch (SQLException ex) {
-				}
+				try {rs.close();} catch (SQLException ex) {}
 			if (pstmt != null)
-				try {
-					pstmt.close();
-				} catch (SQLException ex) {
-				}
+				try {pstmt.close();} catch (SQLException ex) {}
 			if (conn != null)
-				try {
-					conn.close();
-				} catch (SQLException ex) {
-				}
+				try {conn.close();} catch (SQLException ex) {}
 		}
 		return x;
 	}
 
-	//관리자, 직원 추가
+	// 관리자, 직원 추가
 	public void insertStaff(String id, String name, String pw, String tel) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -94,54 +89,85 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		} finally {
 			if (rs != null)
-				try {
-					rs.close();
-				} catch (SQLException ex) {
-				}
+				try {rs.close();} catch (SQLException ex) {}
 			if (pstmt != null)
-				try {
-					pstmt.close();
-				} catch (SQLException ex) {
-				}
+				try {pstmt.close();} catch (SQLException ex) {}
 			if (conn != null)
-				try {
-					conn.close();
-				} catch (SQLException ex) {
-				}
+				try {conn.close();} catch (SQLException ex) {}
 		}
 	}
 
 	public int confirmAuthority(String id) {
-	      Connection conn = null;
-	      PreparedStatement pstmt = null;
-	      ResultSet rs = null;
-	      int x = -1;
-	      
-	      try {
-	         conn = getConnection();
-	         
-	         pstmt = conn.prepareStatement("select * from staff where stf_code= ?");
-	         pstmt.setString(1, id);
-	         rs = pstmt.executeQuery();
-	         
-	         if(rs.next()) {
-	            id = rs.getString("stf_code");
-	            if(id.contains("m")) {
-	               x=1; //관리자
-	            }else if(id.contains("e")){
-	               x=0;
-	            }
-	         }
-	         
-	      }catch(Exception ex) {
-	         ex.printStackTrace();
-	      }finally {
-	         if(rs != null) try { rs.close(); } catch (Exception ex) {}
-	         if(pstmt != null) try { pstmt.close(); } catch(Exception ex) {}
-	         if(conn != null) try { conn.close(); } catch (Exception ex) {}
-	      }
-	      return x;
-	   }	
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int x = -1;
+
+		try {
+			conn = getConnection();
+
+			pstmt = conn.prepareStatement("select * from staff where stf_code= ?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				id = rs.getString("stf_code");
+				if (id.contains("m")) {
+					x = 1; // 관리자
+				} else if (id.contains("e")) {
+					x = 0;
+				}
+			}
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {rs.close();} catch (SQLException ex) {}
+			if (pstmt != null)
+				try {pstmt.close();} catch (SQLException ex) {}
+			if (conn != null)
+				try {conn.close();} catch (SQLException ex) {}
+		}
+		return x;
+	}
+
+	//직원 조회
+	public JSONArray selectStaff() {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		JSONObject jsonObject;
+		JSONArray jsonArray = new JSONArray();
+		
+		try {
+			conn = getConnection();
+
+			String sql = "select * from staff";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				jsonObject = new JSONObject();
+				jsonObject.put("stf_code", rs.getString("stf_code"));
+				jsonObject.put("name", rs.getString("name"));
+				jsonObject.put("passwd", rs.getString("passwd"));
+				jsonObject.put("ph_num", rs.getString("ph_num"));
+				jsonArray.add(jsonObject);
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {rs.close();} catch (SQLException ex) {}
+			if (pstmt != null)
+				try {pstmt.close();} catch (SQLException ex) {}
+			if (conn != null)
+				try {conn.close();} catch (SQLException ex) {}
+		}
+		return jsonArray;
+
+	}
 }
 
 // 관리자 직원 등급 체크하는 메소드

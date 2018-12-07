@@ -41,6 +41,10 @@ $(document).ready(function() {
 	//직원 조회 삭제
 	$("#staff_sd").click(function() {
 		$.ajax({
+			type : "post",
+			url : "/coffee/mStaffSelDel.do",
+			data : query,
+			
 			success : function(data) {
 				window.location.href = "/coffee/mStaffSelDel.do";
 			}

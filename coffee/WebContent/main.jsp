@@ -110,11 +110,11 @@
 			<div id="content" class="box2"></div>
 		</div>
 	</c:if>
-
-	<!-- 로그인 실패 -->
-	<c:if test="${type == 2 }">
-		<c:forward  page="/coffee/Login.jsp"/>
-	</c:if>
+	
+<%-- 	<!-- 로그인 실패 -->
+	<c:if test="${type == 2}">
+		
+	</c:if> --%>
 
 	<!-- cont 부분 -->
 	<c:if test="${not empty cont}">
