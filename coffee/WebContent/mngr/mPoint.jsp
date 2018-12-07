@@ -3,19 +3,19 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="stylesheet" href="/coffee/css/mngr/mCouSel.css" />
+<link rel="stylesheet" href="/coffee/css/mngr/mPoint.css" />
 <script>
 	var redata = prompt("고객 번호를 입력하세요." ,"Customer Number");
 </script>
 
-<div class="cou_sel">
-	<h1>쿠폰관리　　─　　조회</h1>
+<div class="poi_sel">
+	<h1>적립금관리　　─　　조회</h1>
 	<hr />
-	<div id="coupon">
-		<div id="cou_inf">
-				CouponNumber <input type="text" id="cou_num" name="cou_num"
+	<div id="point">
+		<div id="poi_inf">
+				고객명 <input type="text" id="cus_name" name="cus_name"
 							style="width: 150px; height: 20px"> <br /> 
-				Explanation <input type="text" id="cou_exp" name="cou_exp"
+				적립금 <input type="text" id="m_point" name="point"
 							style="width: 150px; height: 20px">
 		</div>
 	</div>

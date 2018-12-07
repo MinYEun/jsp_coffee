@@ -1,10 +1,12 @@
 @charset "EUC-KR";
 
-html {
+html, body {
+	width: 100%;
 	overflow-y: hidden;
 }
 
-.outer {
+
+.ordercoff {
 	width: 1500px;
 	height: 980px;
 	transform: translatex(20%);
@@ -89,13 +91,13 @@ html {
 	margin-right: 10px;
 }
 
-.ch_screen {
-	width: 1400px;
+.menu_md {
+	width: 900px;
 	height: 810px;
-	float: right;
+	float: left;
 	position: relative;
-	overflow: auto;
-	margin-right: 50px;
+	overflow: hidden;
+	display: inline;
 	padding-left: 50px;
 }
 
@@ -142,8 +144,9 @@ html {
 	position: absolute;
 	text-align: center;
 	margin-top: 100px;
-	max-width: 100%;
-	max-heidth: 100%;
+	width: 100%;
+	heidth: 100%;
+	overflow: hidden;
 }
 
 .list_wrap>div {
@@ -158,34 +161,41 @@ html {
 	height: 70%;
 }
 /*-------------------------------------------------*/
-.list_wrap2 {
-	position: absolute;
-	text-align: center;
-	margin-top: 400px;
-	max-width: 100%;
-	max-heidth: 100%;
-}
+/* .list_wrap2 { */
+/* 	position: absolute; */
+/* 	text-align: center; */
+/* 	margin-top: 400px; */
+/* 	max-width: 100%; */
+/* 	max-heidth: 100%; */
+/* } */
 
-.list_wrap2>div {
-	float: left;
-	margin: 10px;
-	width: 200px;
-	height: 250px;
-}
+/* .list_wrap2>div { */
+/* 	float: left; */
+/* 	margin: 10px; */
+/* 	width: 200px; */
+/* 	height: 250px; */
+/* } */
 
-.list_wrap2 img {
-	width: 70%;
-	height: 70%;
-}
+/* .list_wrap2 img { */
+/* 	width: 70%; */
+/* 	height: 70%; */
+/* } */
 /*-------------------------------------------------*/
-.menu_order {
-	width: 30%;
-	height: 80%;
-	display: inline-block;
-	float: right;
+.order_list {
+	width: 400px;
+	height: 760px;
+	display: inline;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
+	margin-top: 50px;
+	margin-right: 50px;                     
+	float: right;
+}
+
+#list{
+	height: 80%;
+	margin: 0 auto;
 }
 
 #btn_j {
@@ -194,10 +204,10 @@ html {
 	border-radius: 5px;
 	background-color: white;
 	border: 2px solid black;
-	transform: translateY(1100%);
 	font-size: 18px;
 }
 
-.sum {
-	transform: translateY(2400%);
+#price {
+	margin-bottom: 10px;
+
 }

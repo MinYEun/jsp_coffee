@@ -3,6 +3,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuAdd.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+ 	$(document).ready(function(){ 
+		$("#uplaod").on("change", loadFile); 
+ 	});
+	function loadFile(event){
+ 		if(event.files && event.files[0]){ 
+			var reader = new FileReader(); 
+ 			reader.onload = function(e) { 
+ 				$('#menu_img').attr('src', e.target.result);
+ 			} 
+ 			reader.readAsDataURL(event.files[0]);
+ 		} 
+ 	} 
+</script>
+
 <script src="/coffee/js/mMenu.js"></script>
 			<div class="ch_screen">
 			<h1>메뉴관리　　─　　추가</h1>

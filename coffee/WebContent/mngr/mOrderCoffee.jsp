@@ -10,9 +10,13 @@
 	<jsp:forward page="/Start.jsp" />
 </c:if>
 <c:if test="${not empty sessionScope.id }">
-	<div class="outer">
+	<div class="ordercoff">
 		<div class="menu_md">
+<<<<<<< HEAD
 			<h1>주문관리 ─ 추가</h1>
+=======
+			<h1>주문관리　　─　　추가</h1>
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 			<hr />
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>
@@ -43,29 +47,9 @@
 			</div>
 			<br>
 			<!-------------------------------------------------------------------->
-			<div class="list_wrap2">
-				<div class="coldbru">
-					<img id="coldwhite" src="/coffee/images/콜드브루 화이트.png"> <br>
-					<input type="checkbox" id="menu_ch">콜드브루 화이트
-				</div>
-
-				<div class="coldbru_black">
-					<img id="coldblack" src="/coffee/images/콜드브루 블랙.png"> <br>
-					<input type="checkbox" id="menu_ch">콜드브루 블랙
-				</div>
-
-				<div class="ice_latte">
-					<img id="ice_latte" src="/coffee/images/아이스 라떼.png"> <br>
-					<input type="checkbox" id="menu_ch">아이스 라떼
-				</div>
-
-				<div class="ice_drip">
-					<img id="ice_drip" src="/coffee/images/아이스 드립커피.png"> <br>
-					<input type="checkbox" id="menu_ch">아이스 드립커피
-				</div>
-			</div>
 		</div>
-		<div class="menu_order">
+		<div class="order_list">
+			<div id="list">
 			주문 목록<br> <input type="text" width="50px" placeholder="메뉴 명">
 			<select name="number">
 				<option>1</option>
@@ -78,12 +62,14 @@
 				<option>8</option>
 				<option>9</option>
 				<option>10</option>
-			</select><br>
-			<div class="sum">
-				<input type="text" placeholder="총 금액">
+			</select>
 			</div>
-			<button id="btn_j" type="submit">적립</button>
-			<button id="btn_j" type="submit">쿠폰</button>
+			<div id="price">
+				<input type="text" placeholder="총 금액" width="50px">
+			</div>
+			<div id="etc">
+				<button id="btn_j" type="submit">적립</button>
+			</div>
 		</div>
-	</div>
+
 </c:if>
