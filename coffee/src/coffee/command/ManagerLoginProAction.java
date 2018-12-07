@@ -20,15 +20,11 @@ public class ManagerLoginProAction implements CommandAction {
 	    //DB와 연동해서 사용자의 인증을 처리
 	    MngrDBBean dbPro = MngrDBBean.getInstance();
         int check = dbPro.userCheck(id,passwd);
-        // String 변수      호출하는 메소드
         
         //해당 뷰(응답페이지)로 보낼 내용을 request속성에 지정
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
 		
-		// request에 관리자인지 직원인지를 체크하는 값을 저장한다.
-		
-		request.getSession().setAttribute("id", id);
 		System.out.println(id);
 		System.out.println("LoginProAction");
 		return "/mngr/logon/mLoginPro.jsp";

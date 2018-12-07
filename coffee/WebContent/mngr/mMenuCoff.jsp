@@ -5,12 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuCoff.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<<<<<<< HEAD
 <link rel="stylesheet" href="/coffee/css/mMenuCoff.css"/>
 <script src="/coffee/mngr/mMenu.js"></script>
-=======
 <script src="/coffee/js/mMenu.js"></script>
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 
 
 		<div class="menu_coff">

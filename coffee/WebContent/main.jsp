@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet" type="text/css">
+<link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet"
+	type="text/css">
+	
+<script src="/coffee/Start.js"></script>
+<script src="/coffee/main.js"></script>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <title>main.jsp</title>
 </head>
 <body>
+	<!-- 관리자, 직원 로그인 Type -->
 	<c:if test="${empty sessionScope.id}">
 		<div id="header">
 			<div id="auth" class="box">
@@ -24,8 +30,8 @@
 		</div>
 	</c:if>
 
+	<!-- 왼쪽 고정 바 -->
 	<c:if test="${!empty sessionScope.id }">
-		<div class="outer">
 			<span class="menu">
 				<div class="menulogo">
 					<img width="250px" height="120px" alt="logo"
@@ -35,7 +41,7 @@
 					<ul>
 						<li>메뉴관리</li>
 						<ul>
-							<li><button id="menu_add">추가</button>
+							<li><button type="button" id="menu_add">추가</button>
 							<li><button id="menu_md">수정/삭제</button>
 						</ul>
 					</ul>
@@ -88,9 +94,9 @@
 				xxx님 안녕하세요
 				<button id="logout">로그아웃</button>
 			</div>
-		</div>
 	</c:if>
-
+	
+	<!-- cont 부분 -->
 	<div id="content" class="box2">
 		<c:if test="${not empty cont}">
 			<jsp:include page="${cont}" />

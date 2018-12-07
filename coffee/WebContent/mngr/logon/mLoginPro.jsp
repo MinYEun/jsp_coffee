@@ -6,8 +6,3 @@
 	<c:set var="id" value="${id}" scope="session"/>
 	<c:set var="type" value="${check}" scope="session"/>
 </c:if>
-
-<c:if test="${check == 2}">
-	<c:set var="id" value="${id}" scope="session"/>
-	<c:set var="type" value="${check}" scope="session"/>
-</c:if>

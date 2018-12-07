@@ -34,7 +34,7 @@ public class MngrDBBean {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		int x = -1;
+		int x=-1;
 
 		try {
 			conn = getConnection();

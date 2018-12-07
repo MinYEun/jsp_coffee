@@ -12,8 +12,8 @@
 			src="/coffee/images/loginlogo.PNG" />
 	</div>
 		<div class="status">
-			<h2>Welcome back,</h2>
-			<label> <span>Email</span> <input id="id" type="email" />
+			<h2>Welcome back, Manager</h2>
+			<label> <span>Email</span> <input id="id" type="text" />
 			</label> <label> <span>Password</span> <input id="passwd" type="password" />
 			</label>
 			<button type="button" id="login">Sign In</button>

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link href="/coffee/css/mngr/mCusDel.css" rel="stylesheet" type="text/css">
 
-<script>
+<!-- <script>
 	var redata = prompt("고객 번호를 입력하세요." ,"Customer Number");
-</script>
+</script> -->
 	
 		<div class="cus_del">
 			<h1>고객관리 ─ 조회/삭제</h1>
