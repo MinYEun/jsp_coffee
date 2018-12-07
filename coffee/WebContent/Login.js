@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	// [로그인]버튼을 클릭하면 자동실행
+	// [로그인]버튼을 클릭하면 실행
 	$("#login").click(function() {
 		var query = {
 				id : $("#id").val(),
@@ -8,20 +8,12 @@ $(document).ready(function() {
 		
 		$.ajax({
 			type : "post",
-			url : "/coffee/Start.do",
+			url : "/coffee/index.do",
 			data : query,
 			success : function(data){
 				alert("로그인 성공");
+				window.location.href="/coffee/mOrderCoffee.do";
 			}
 		});
-		
-//		window.location.href="/coffee/Start.do";
 	});
-	
-	
-	
-	
-//	$("#elogin").click(function() {
-//		window.location.href="/coffee/eindex.do";
-//	});
 });

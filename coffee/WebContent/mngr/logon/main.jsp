@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet" type="text/css">
+<link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet"
+	type="text/css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,23 @@
 <title>main.jsp</title>
 </head>
 <body>
+	<!-- 관리자, 직원 로그인 Type -->
+	<c:if test="${empty sessionScope.id}">
+		<div id="header">
+			<div id="auth" class="box">
+				<!-- 관리자용 로그인 폼 -->
+				<c:if test="${type == 1}">
+					<jsp:include page="/mngr/logon/mLoginForm.jsp" />
+				</c:if>
+
+				<!-- 직원용 로그인 폼 -->
+				<c:if test="${type == 2}">
+					<jsp:include page="/mngr/logon/eLoginForm.jsp" />
+				</c:if>
+			</div>
+		</div>
+	</c:if>
+
 	<!-- 관리자 메뉴 바 -->
 	<c:if test="${type == 0 }">
 		<span class="menu">

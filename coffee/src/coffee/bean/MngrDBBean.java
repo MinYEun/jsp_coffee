@@ -1,6 +1,5 @@
 package coffee.bean;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,19 +34,19 @@ public class MngrDBBean {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		int x=-1;
+		int x = -1;
 
 		try {
 			conn = getConnection();
 
 			String orgPass = passwd;
-			
-			pstmt = conn.prepareStatement("select managerPasswd from mcoffee where managerId = ?");
+
+			pstmt = conn.prepareStatement("select passwd from staff where stf_code = ?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {// 해당 아이디가 있으면 수행
-				String dbpasswd = rs.getString("managerPasswd");
+				String dbpasswd = rs.getString("passwd");
 				if (orgPass.equals(dbpasswd))
 					x = 1; // 인증성공
 				else
@@ -59,50 +58,90 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		} finally {
 			if (rs != null)
-				try {rs.close();} catch (SQLException ex) {}
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
 			if (pstmt != null)
-				try {pstmt.close();} catch (SQLException ex) {}
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
 			if (conn != null)
-				try {conn.close();} catch (SQLException ex) {}
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
 		}
 		return x;
 	}
-	public void insertStaff(String id, String name,String pw, String tel) {
+
+	//관리자, 직원 추가
+	public void insertStaff(String id, String name, String pw, String tel) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		
-		
-
 		try {
 			conn = getConnection();
-
-			
-			
-			pstmt = conn.prepareStatement("insert into coffee.staff values(?,?,?,?)");
+			pstmt = conn.prepareStatement("insert into staff values(?,?,?,?)");
 			pstmt.setString(1, id);
 			pstmt.setString(2, name);
 			pstmt.setString(3, pw);
 			pstmt.setString(4, tel);
 			pstmt.executeUpdate();
-			
-			
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
 			if (rs != null)
-				try {rs.close();} catch (SQLException ex) {}
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
 			if (pstmt != null)
-				try {pstmt.close();} catch (SQLException ex) {}
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
 			if (conn != null)
-				try {conn.close();} catch (SQLException ex) {}
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
 		}
-		
-		}
-	
-	
-	
 	}
-	
-	// 관리자 직원 등급 체크하는 메소드
+
+	public int confirmAuthority(String id) {
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      ResultSet rs = null;
+	      int x = -1;
+	      
+	      try {
+	         conn = getConnection();
+	         
+	         pstmt = conn.prepareStatement("select * from staff where stf_code= ?");
+	         pstmt.setString(1, id);
+	         rs = pstmt.executeQuery();
+	         
+	         if(rs.next()) {
+	            id = rs.getString("stf_code");
+	            if(id.contains("m")) {
+	               x=1; //관리자
+	            }else if(id.contains("e")){
+	               x=0;
+	            }
+	         }
+	         
+	      }catch(Exception ex) {
+	         ex.printStackTrace();
+	      }finally {
+	         if(rs != null) try { rs.close(); } catch (Exception ex) {}
+	         if(pstmt != null) try { pstmt.close(); } catch(Exception ex) {}
+	         if(conn != null) try { conn.close(); } catch (Exception ex) {}
+	      }
+	      return x;
+	   }	
+}
+
+// 관리자 직원 등급 체크하는 메소드

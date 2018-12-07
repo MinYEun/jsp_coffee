@@ -1,43 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mStaffAdd.css"/>
-<script>
-
-$(document).ready(function(){
-	
-	$("#add").click(function(){
-		alert("되는거맞지;?");
-		
-		var query= {
-				
-				id : $("#stf_num").val(),
-				name : $("#stf_name").val(),
-				tel : $("#stf_ph").val(),
-				pw : $("#stf_pw").val()
-
-		}
-		
-		
-		$.ajax({
-		
-			type : "post",
-			url : "/coffee/mStaffAdd.do",
-			data : query,
-			success : function(data) {
-				
-				alert("ok");
-				
-			}
-		});
-		
-	});
-	
-});
-</script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+<script src="/coffee/mngr/mStaffAdd.js"></script>
 
 		<div class="staff_add">
 			<h1>직원관리　　─　　추가</h1>
@@ -57,4 +26,3 @@ $(document).ready(function(){
 			</div>
 			
 		</div>
-	

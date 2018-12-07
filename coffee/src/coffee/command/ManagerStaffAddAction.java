@@ -25,17 +25,7 @@ public class ManagerStaffAddAction implements CommandAction {
 	    
 	    
 	    dbPro.insertStaff(id, name, pw, tel);
-//	    //DB와 연동해서 사용자의 인증을 처리
-//	    MngrDBBean dbPro = MngrDBBean.getInstance();
-//        int check = dbPro.userCheck(id,passwd);
-//        
-//        //해당 뷰(응답페이지)로 보낼 내용을 request속성에 지정
-//		request.setAttribute("check", new Integer(check));
-//		request.setAttribute("id", id);
-//		
-//		System.out.println("check: " + check);
-//		System.out.println("id: " + id);
-//		System.out.println("LoginProAction");
+
 //	    HttpSession session = request.getSession();
 //	    session.getAttribute("name", ?? );
 //		
