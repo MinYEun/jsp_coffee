@@ -8,15 +8,11 @@ import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
-<<<<<<< HEAD
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-=======
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 
 public class MngrDBBean {
 	// MngrDBBean 전역 객체 생성 <-- 한 개의 객체만 생성해서 공유
@@ -49,15 +45,12 @@ public class MngrDBBean {
 			conn = getConnection();
 
 			String orgPass = passwd;
-<<<<<<< HEAD
 			
 			pstmt = conn.prepareStatement("select passwd from staff where name = ?");
 			pstmt.setString(1, name);
-=======
 
 			pstmt = conn.prepareStatement("select passwd from staff where stf_code = ?");
-			pstmt.setString(1, id);
->>>>>>> refs/remotes/origin/master
+			pstmt.setString(1, name);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {// 해당 아이디가 있으면 수행
 				String dbpasswd = rs.getString("passwd");
@@ -80,7 +73,6 @@ public class MngrDBBean {
 		}
 		return x;
 	}
-<<<<<<< HEAD
 
 	// 관리자, 직원 추가
 	public void insertStaff(String id, String name, String pw, String tel) {
@@ -179,10 +171,8 @@ public class MngrDBBean {
 		return jsonArray;
 
 	}
-}
 
 // 관리자 직원 등급 체크하는 메소드
-=======
 	
 	// 관리자 직원 등급 체크하는 메소드
 	
@@ -233,4 +223,3 @@ public class MngrDBBean {
 
 	
 }
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
