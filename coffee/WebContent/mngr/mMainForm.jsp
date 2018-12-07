@@ -17,20 +17,6 @@
 
 
 <c:if test="${!empty sessionScope.id }">
-<script>
- 	$(document).ready(function(){ 
-		$("#uplaod").on("change", loadFile); 
- 	});
-	function loadFile(event){
- 		if(event.files && event.files[0]){ 
-			var reader = new FileReader(); 
- 			reader.onload = function(e) { 
- 				$('#menu_img').attr('src', e.target.result);
- 			} 
- 			reader.readAsDataURL(event.files[0]);
- 		} 
- 	} 
-</script>
 
 	<div class="outer">
 		<span class="menu">
