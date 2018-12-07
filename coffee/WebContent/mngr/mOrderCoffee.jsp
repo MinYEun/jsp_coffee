@@ -21,25 +21,35 @@
 				<button id="side_menu">SIDE MENU</button>
 			</div>
 			<div class="list_wrap">
-				<div class="americano">
-					<img id="ame" src="/coffee/images/아메리카노.png"> <br> <input
-						type="checkbox" id="menu_ch">아메리카노
-				</div>
+<!-- 				<div class="americano"> -->
+<!-- 					<img id="ame" src="/coffee/images/아메리카노.png"> <br> <input -->
+<!-- 						type="checkbox" id="menu_ch">아메리카노 -->
+<!-- 				</div> -->
 
-				<div class="cafelatte">
-					<img id="lat" src="/coffee/images/아이스 모카.png"> <br> <input
-						type="checkbox" id="menu_ch">아이스 모카
-				</div>
+<!-- 				<div class="cafelatte"> -->
+<!-- 					<img id="lat" src="/coffee/images/아이스 모카.png"> <br> <input -->
+<!-- 						type="checkbox" id="menu_ch">아이스 모카 -->
+<!-- 				</div> -->
 
-				<div class="capu">
-					<img id="lat" src="/coffee/images/아이스 카푸치노.png"> <br> <input
-						type="checkbox" id="menu_ch">아이스 카푸치노
-				</div>
+<!-- 				<div class="capu"> -->
+<!-- 					<img id="lat" src="/coffee/images/아이스 카푸치노.png"> <br> <input -->
+<!-- 						type="checkbox" id="menu_ch">아이스 카푸치노 -->
+<!-- 				</div> -->
 
-				<div class="Caramel">
-					<img id="lat" src="/coffee/images/카라멜 라떼.png"> <br> <input
-						type="checkbox" id="menu_ch">카라멜 라떼
-				</div>
+<!-- 				<div class="Caramel"> -->
+<!-- 					<img id="lat" src="/coffee/images/카라멜 라떼.png"> <br> <input -->
+<!-- 						type="checkbox" id="menu_ch">카라멜 라떼 -->
+<!-- 				</div> -->
+		
+					<c:forEach var="m" items="${menu}">
+    					  <div id="customerlist">
+      					  <div class="customer">${m.menu_code}</div>
+         				  <div class="customer">${m.menu_name}</div>
+         				  <div class="customer">${m.cus_mile}</div>
+       					  <div class="customer">${m.cus_regdate}</div>
+    				  </div>
+      </c:forEach>
+				
 			</div>
 			<br>
 			<!-------------------------------------------------------------------->
@@ -47,18 +57,18 @@
 		<div class="order_list">
 			<div id="list">
 			주문 목록<br> <input type="text" width="50px" placeholder="메뉴 명">
-			<select name="number">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
-				<option>9</option>
-				<option>10</option>
-			</select>
+<!-- 			<select name="number"> -->
+<!-- 				<option>1</option> -->
+<!-- 				<option>2</option> -->
+<!-- 				<option>3</option> -->
+<!-- 				<option>4</option> -->
+<!-- 				<option>5</option> -->
+<!-- 				<option>6</option> -->
+<!-- 				<option>7</option> -->
+<!-- 				<option>8</option> -->
+<!-- 				<option>9</option> -->
+<!-- 				<option>10</option> -->
+<!-- 			</select> -->
 			</div>
 			<div id="price">
 				<input type="text" placeholder="총 금액" width="50px">

@@ -14,9 +14,8 @@ $(document).ready(function() {
 				window.location.href = "/coffee/mg/managerMain.do";
 			}
 		});
-
 	});
-
+	
 	// [로그아웃]버튼을 클릭하면 자동실행
 	$("#logout").click(function() {
 		$.ajax({

@@ -18,11 +18,7 @@ public class MngrDBBean {
 
 	// MngrDBBean 객체를 리턴하는 메소드
 	public static MngrDBBean getInstance() {
-		//login시 세션에 등록
-		MngrDBBean dbPro = MngrDBBean.getInstance();
-			HttpSession session = request.getSession();
-			session.setAttribute("menu", dbPro.getMenuList());
-		return instance;
+		return instance;	
 	}
 
 	private MngrDBBean() {
@@ -37,7 +33,7 @@ public class MngrDBBean {
 	}
 
 	// 관리자 인증 메소드
-	public int userCheck(String id, String passwd) {
+	public int userCheck(String name, String passwd) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -48,12 +44,11 @@ public class MngrDBBean {
 
 			String orgPass = passwd;
 			
-			pstmt = conn.prepareStatement("select managerPasswd from mcoffee where managerId = ?");
-			pstmt.setString(1, id);
+			pstmt = conn.prepareStatement("select passwd from staff where name = ?");
+			pstmt.setString(1, name);
 			rs = pstmt.executeQuery();
-
 			if (rs.next()) {// 해당 아이디가 있으면 수행
-				String dbpasswd = rs.getString("managerPasswd");
+				String dbpasswd = rs.getString("passwd");
 				if (orgPass.equals(dbpasswd))
 					x = 1; // 인증성공
 				else
@@ -97,10 +92,10 @@ public class MngrDBBean {
 		
 		while(rs.next()) {
 			MenuBean m = new MenuBean();
-			m.setMenu_code(rs.getString("_id"));
-			m.setClass_code(rs.getString("detail"));
-			m.setMenu_name(rs.getString("done"));
-			m.setPrice(rs.getInt("Price"));
+			m.setMenu_code(rs.getString("menu_code"));
+			m.setClass_code(rs.getString("class_code"));
+			m.setMenu_name(rs.getString("menu_name"));
+			m.setPrice(rs.getInt("price"));
 			m.setImg(rs.getString("img"));
 			list.add(m);
 		}
