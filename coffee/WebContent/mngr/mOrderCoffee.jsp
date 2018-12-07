@@ -12,7 +12,7 @@
 <c:if test="${not empty sessionScope.id }">
 	<div class="outer">
 		<div class="menu_md">
-			<h1>메뉴관리 ─ 수정/삭제</h1>
+			<h1>주문관리 ─ 추가</h1>
 			<hr />
 			<div id="menu_class">
 				<button id="coffee">COFFEE</button>

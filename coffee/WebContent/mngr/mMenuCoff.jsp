@@ -6,18 +6,17 @@
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuCoff.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="/coffee/css/mMenuCoff.css"/>
-<script src="/coffee/mngr/mMenu.js"></script>
 <script src="/coffee/js/mMenu.js"></script>
 
 
 		<div class="menu_coff">
-			<h1>메뉴관리　　─　　수정/삭제</h1>
+			<h1>메뉴관리　　─　　수정/삭제C</h1>
 			<hr/>
 			<div id="menu_class">
-				<button id="coffee">COFFEE</button>
-				<button id="smoothie">SMOOTHIE</button>
-				<button id="ade">ADE</button>
-				<button id="side_menu">SIDE MENU</button>
+				<button id="coffee" type="button">COFFEE</button>
+				<button id="smoothie" type="button">SMOOTHIE</button>
+				<button id="ade" type="button">ADE</button>
+				<button id="side_menu" type="button">SIDE MENU</button>
 			</div>
 			<div class="menu_img">
 				<div id="m_img">
