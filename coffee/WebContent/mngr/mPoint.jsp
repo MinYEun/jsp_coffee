@@ -9,7 +9,7 @@
 </script>
 
 <div class="poi_sel">
-	<h1>쿠폰관리　　─　　조회</h1>
+	<h1>적립금관리　　─　　조회</h1>
 	<hr />
 	<div id="point">
 		<div id="poi_inf">

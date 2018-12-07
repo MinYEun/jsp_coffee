@@ -47,12 +47,11 @@
 					</ul>
 				</ul>
 			</div>
-			<div class="cou_mn">
+			<div class="point_mn">
 				<ul>
-					<li>쿠폰관리
+					<li>적립금관리
 						<ul>
-							<li><button id="cou_add">쿠폰 등록</button>
-							<li><button id="cou_sd">쿠폰 조회/삭제</button>
+							<li><button id="point_sel">쿠폰 조회/삭제</button>
 						</ul>
 				</ul>
 			</div>
