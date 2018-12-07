@@ -10,14 +10,9 @@ $(document).ready(function() {
 			type : "POST",
 			url : "/coffee/mg/managerLoginPro.do",
 			data : query,
-			error : function(data){
-				alert("로그인 실패");
-				window.location.href = "/coffee/index.do";
-			},
 			success : function(data) {
-				alert("로그인 성공");
 				window.location.href = "/coffee/mg/managerMain.do";
-			},
+			}
 		});
 
 	});

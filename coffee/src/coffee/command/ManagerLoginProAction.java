@@ -25,8 +25,10 @@ public class ManagerLoginProAction implements CommandAction {
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
 		
-		System.out.println(id);
+		System.out.println("check: " + check);
+		System.out.println("id: " + id);
 		System.out.println("LoginProAction");
+		
 		return "/mngr/logon/mLoginPro.jsp";
 	}
 }

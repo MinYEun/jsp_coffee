@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<button type="button" id="mlogin" >관리자 로그인</button>
-	<button type="button" id="elogin" >직원 로그인</button>
+	<div id="start">
+		<button type="button" id="mlogin">관리자 로그인</button>
+		<button type="button" id="elogin">직원 로그인</button>
+	</div>
 </body>
 </html>

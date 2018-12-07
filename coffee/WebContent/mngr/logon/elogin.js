@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// [로그인]버튼을 클릭하면 자동실행
 	$("#login").click(function() {
 		var query = {
-			id : $("#num").val(),
+			id : $("#id").val(),
 			passwd : $("#passwd").val()
 		};
 

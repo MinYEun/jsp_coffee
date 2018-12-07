@@ -30,7 +30,7 @@ public class EmpDBBean {
 	}
 
 	// 관리자 인증 메소드
-	public int userCheck(String num, String passwd) {
+	public int userCheck(String id, String passwd) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -42,11 +42,11 @@ public class EmpDBBean {
 			String orgPass = passwd;
 			
 			pstmt = conn.prepareStatement("select employeePasswd from ecoffee where employeeNum = ?");
-			pstmt.setString(1, num);
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {// 해당 아이디가 있으면 수행
-				String dbpasswd = rs.getString("managerPasswd");
+				String dbpasswd = rs.getString("employeePasswd");
 				if (orgPass.equals(dbpasswd))
 					x = 1; // 인증성공
 				else

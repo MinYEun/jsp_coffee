@@ -9,6 +9,9 @@ public class ManagerLogoutAction implements CommandAction {
 	public String requestPro(HttpServletRequest request,
 			HttpServletResponse response) throws Throwable {
 		// TODO Auto-generated method stub
+		request.getSession().removeAttribute("id");
+		request.getSession().removeAttribute("name");
+		
 		return "/mngr/logon/mLogout.jsp";
 	}
 }
