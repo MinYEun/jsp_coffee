@@ -10,62 +10,72 @@
 	<jsp:forward page="/Start.jsp" />
 </c:if>
 <c:if test="${not empty sessionScope.id }">
-	<!-- <div class="ordercoff">
-		<div class="menu_md">
-			<h1>주문관리　　─　　추가</h1>
-			<hr />
-			<div id="menu_class">
-				<button id="coffee">COFFEE</button>
-				<button id="smoothie">SMOOTHIE</button>
-				<button id="ade">ADE</button>
-				<button id="side_menu">SIDE MENU</button>
-			</div>
-			<div class="list_wrap">
-				<div class="americano">
-					<img id="ame" src="/coffee/images/아메리카노.png"> <br> <input
-						type="checkbox" id="menu_ch">아메리카노
+	<div class="ordercoff">
+		<div class="ordercoff">
+			<div class="menu_md">
+				<h1>주문관리 ─ 추가</h1>
+				<hr />
+				<div id="menu_class">
+					<button id="coffee">COFFEE</button>
+					<button id="smoothie">SMOOTHIE</button>
+					<button id="ade">ADE</button>
+					<button id="side_menu">SIDE MENU</button>
 				</div>
+				<div class="list_wrap">
+					<div class="americano">
+						<img id="ame" src="/coffee/images/아메리카노.png"> <br>
+						<input type="checkbox" id="menu_ch">아메리카노 
+ 				</div>
 
-				<div class="cafelatte">
-					<img id="lat" src="/coffee/images/아이스 모카.png"> <br> <input
-						type="checkbox" id="menu_ch">아이스 모카
+					<div class="cafelatte">
+						<img id="lat" src="/coffee/images/아이스 모카.png"> <br>
+						<input type="checkbox" id="menu_ch">아이스 모카
+					</div>
+
+					<div class="capu">
+						<img id="lat" src="/coffee/images/아이스 카푸치노.png"> <br>
+						<input type="checkbox" id="menu_ch">아이스 카푸치노
+					</div>
+
+					<div class="Caramel">
+						<img id="lat" src="/coffee/images/카라멜 라떼.png"> <br>
+						<input type="checkbox" id="menu_ch">카라멜 라떼
+					</div>
+
+					<c:forEach var="m" items="${menu}">
+						<div id="menulist">
+							<div class="menu_code">${m.menu_code}</div>
+							<div class="class_code">${m.class_code}</div>
+							<div class="menu_name">${m.menu_name}</div>
+							<div class="price">${m.priice}</div>
+							<div class="img">${m.img}</div>
+						</div>
+					</c:forEach>
+
 				</div>
-
-				<div class="capu">
-					<img id="lat" src="/coffee/images/아이스 카푸치노.png"> <br> <input
-						type="checkbox" id="menu_ch">아이스 카푸치노
+				<br>
+			</div>
+			<div class="order_list">
+				<div id="list">
+					주문 목록<br> <input type="text" width="50px" placeholder="메뉴 명">
+					<!-- 			<select name="number"> -->
+					<!-- 				<option>1</option> -->
+					<!-- 				<option>2</option> -->
+					<!-- 				<option>3</option> -->
+					<!-- 				<option>4</option> -->
+					<!-- 				<option>5</option> -->
+					<!-- 				<option>6</option> -->
+					<!-- 				<option>7</option> -->
+					<!-- 				<option>8</option> -->
+					<!-- 				<option>9</option> -->
+					<!-- 				<option>10</option> -->
+					<!-- 			</select> -->
 				</div>
-
-				<div class="Caramel">
-					<img id="lat" src="/coffee/images/카라멜 라떼.png"> <br> <input
-						type="checkbox" id="menu_ch">카라멜 라떼
+				<div id="price">
+					<input type="text" placeholder="총 금액" width="50px">
+				</div>
+				<div id="etc">
+					<button id="btn_j" type="submit">적립</button>
 				</div>
 			</div>
-			<br>
-			----------------------------------------------------------------
-		</div>
-		<div class="order_list">
-			<div id="list">
-			주문 목록<br> <input type="text" width="50px" placeholder="메뉴 명">
-			<select name="number">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
-				<option>9</option>
-				<option>10</option>
-			</select>
-			</div>
-			<div id="price">
-				<input type="text" placeholder="총 금액" width="50px">
-			</div>
-			<div id="etc">
-				<button id="btn_j" type="submit">적립</button>
-			</div>
-		</div> -->
-
 </c:if>

@@ -10,6 +10,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -19,7 +20,7 @@ public class MngrDBBean {
 
 	// MngrDBBean 객체를 리턴하는 메소드
 	public static MngrDBBean getInstance() {
-		return instance;
+		return instance;	
 	}
 
 	private MngrDBBean() {
@@ -34,7 +35,7 @@ public class MngrDBBean {
 	}
 
 	// 관리자 인증 메소드
-	public int userCheck(String id, String passwd) {
+	public int userCheck(String name, String passwd) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -44,11 +45,10 @@ public class MngrDBBean {
 			conn = getConnection();
 
 			String orgPass = passwd;
-
+			
 			pstmt = conn.prepareStatement("select passwd from staff where stf_code = ?");
-			pstmt.setString(1, id);
+			pstmt.setString(1, name);
 			rs = pstmt.executeQuery();
-
 			if (rs.next()) {// 해당 아이디가 있으면 수행
 				String dbpasswd = rs.getString("passwd");
 				if (orgPass.equals(dbpasswd))
@@ -70,6 +70,7 @@ public class MngrDBBean {
 		}
 		return x;
 	}
+
 
 
 	// 관리자, 직원 추가
@@ -195,6 +196,7 @@ public class MngrDBBean {
 
 	// 관리자 직원 등급 체크하는 메소드
 
+// 관리자 직원 등급 체크하는 메소드
 	
 	// 관리자 직원 등급 체크하는 메소드
 	
@@ -241,8 +243,46 @@ public class MngrDBBean {
 //		return list;
 //	
 //	}
-	
-
+//	public ArrayList<MenuBean> getMenuList(){
+//		ArrayList<MenuBean> list = null;
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//		Connection conn = null;
+//	
+//		try {
+//		Context initCtx = new InitialContext();
+//		Context envCtx = (Context) initCtx.lookup("java:comp/env");
+//		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
+//		conn = ds.getConnection();
+//		list = new ArrayList<>();
+//		
+//		String sql = "select * from menu";
+//		pstmt = conn.prepareStatement(sql);
+//		rs = pstmt.executeQuery();
+//		
+//		while(rs.next()) {
+//			MenuBean m = new MenuBean();
+//			m.setMenu_code(rs.getString("menu_code"));
+//			m.setClass_code(rs.getString("class_code"));
+//			m.setMenu_name(rs.getString("menu_name"));
+//			m.setPrice(rs.getInt("price"));
+//			m.setImg(rs.getString("img"));
+//			list.add(m);
+//		}
+//		
+//		
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}finally{
+//			if(rs!=null)
+//				try{rs.close();}catch(SQLException sqle){}
+//			if(pstmt!=null)
+//				try{pstmt.close();}catch(SQLException sqle){}
+//			if(conn!=null)
+//				try{conn.close();}catch(SQLException sqle){}
+//		}
+//		return list;
+//	
+//	}
 	
 }
-

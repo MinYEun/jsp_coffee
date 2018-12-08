@@ -9,7 +9,8 @@
 <c:if test="${empty sessionScope.id }">
 	<div class="tip">
 		<img id="logo" width="250px" height="120px" alt="logo"
-			src="/coffee/images/loginlogo.PNG" />
+			src="/coffe
+			e/images/loginlogo.PNG" />
 	</div>
 	<div class="status">
 		<h2>Welcome back!!</h2>
