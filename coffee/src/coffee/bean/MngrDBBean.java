@@ -201,88 +201,48 @@ public class MngrDBBean {
 	// 관리자 직원 등급 체크하는 메소드
 	
 	
-	// 메뉴 세션 저장
-//	public ArrayList<MenuBean> getMenuList(){
-//		ArrayList<MenuBean> list = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//		Connection conn = null;
-//	
-//		try {
-//		Context initCtx = new InitialContext();
-//		Context envCtx = (Context) initCtx.lookup("java:comp/env");
-//		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
-//		conn = ds.getConnection();
-//		list = new ArrayList<>();
-//		
-//		String sql = "select * from menu";
-//		pstmt = conn.prepareStatement(sql);
-//		rs = pstmt.executeQuery();
-//		
-//		while(rs.next()) {
-//			MenuBean m = new MenuBean();
-//			m.setMenu_code(rs.getString("_id"));
-//			m.setClass_code(rs.getString("detail"));
-//			m.setMenu_name(rs.getString("done"));
-//			m.setPrice(rs.getInt("Price"));
-//			m.setImg(rs.getString("img"));
-//			list.add(m);
-//		}
-//		
-//		
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}finally{
-//			if(rs!=null)
-//				try{rs.close();}catch(SQLException sqle){}
-//			if(pstmt!=null)
-//				try{pstmt.close();}catch(SQLException sqle){}
-//			if(conn!=null)
-//				try{conn.close();}catch(SQLException sqle){}
-//		}
-//		return list;
-//	
-//	}
-//	public ArrayList<MenuBean> getMenuList(){
-//		ArrayList<MenuBean> list = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//		Connection conn = null;
-//	
-//		try {
-//		Context initCtx = new InitialContext();
-//		Context envCtx = (Context) initCtx.lookup("java:comp/env");
-//		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
-//		conn = ds.getConnection();
-//		list = new ArrayList<>();
-//		
-//		String sql = "select * from menu";
-//		pstmt = conn.prepareStatement(sql);
-//		rs = pstmt.executeQuery();
-//		
-//		while(rs.next()) {
-//			MenuBean m = new MenuBean();
-//			m.setMenu_code(rs.getString("menu_code"));
-//			m.setClass_code(rs.getString("class_code"));
-//			m.setMenu_name(rs.getString("menu_name"));
-//			m.setPrice(rs.getInt("price"));
-//			m.setImg(rs.getString("img"));
-//			list.add(m);
-//		}
-//		
-//		
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}finally{
-//			if(rs!=null)
-//				try{rs.close();}catch(SQLException sqle){}
-//			if(pstmt!=null)
-//				try{pstmt.close();}catch(SQLException sqle){}
-//			if(conn!=null)
-//				try{conn.close();}catch(SQLException sqle){}
-//		}
-//		return list;
-//	
-//	}
+	 //메뉴 세션 저장
+	public ArrayList<MenuBean> getMenuList(){
+		ArrayList<MenuBean> list = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Connection conn = null;
+	
+		try {
+		Context initCtx = new InitialContext();
+		Context envCtx = (Context) initCtx.lookup("java:comp/env");
+		DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
+		conn = ds.getConnection();
+		list = new ArrayList<>();
+		
+		String sql = "select * from menu";
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()) {
+			MenuBean m = new MenuBean();
+			m.setMenu_code(rs.getString("menu_code"));
+			m.setClass_code(rs.getString("class_code"));
+			m.setMenu_name(rs.getString("menu_name"));
+			m.setPrice(rs.getInt("price"));
+			m.setImg(rs.getString("img"));
+			list.add(m);
+		}
+		
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally{
+			if(rs!=null)
+				try{rs.close();}catch(SQLException sqle){}
+			if(pstmt!=null)
+				try{pstmt.close();}catch(SQLException sqle){}
+			if(conn!=null)
+				try{conn.close();}catch(SQLException sqle){}
+		}
+		return list;
+	
+	}
+	
 	
 }

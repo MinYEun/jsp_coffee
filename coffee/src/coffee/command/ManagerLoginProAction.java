@@ -28,12 +28,12 @@ public class ManagerLoginProAction implements CommandAction {
         //해당 뷰(응답페이지)로 보낼 내용을 request속성에 지정
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
-		//login시 세션에 등록
-		HttpSession session = request.getSession();
-		ArrayList<MenuBean> bean=new ArrayList<>();
-		bean=dbPro.getMenuList();
-		System.out.println(bean.get(0).getMenu_code());
-		session.setAttribute("menu", dbPro.getMenuList());
+//		//login시 세션에 등록
+//		HttpSession session = request.getSession();
+//		ArrayList<MenuBean> bean=new ArrayList<>();
+//		bean=dbPro.getMenuList();
+//		System.out.println(bean.get(0).getMenu_code());
+//		session.setAttribute("menu", dbPro.getMenuList());
 		System.out.println();
 		System.out.println("check: " + check);
 		System.out.println("id: " + id);

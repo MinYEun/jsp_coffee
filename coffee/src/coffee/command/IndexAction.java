@@ -1,7 +1,12 @@
 package coffee.command;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import coffee.bean.MenuBean;
 import coffee.bean.MngrDBBean;
 
 public class IndexAction implements CommandAction {
@@ -26,6 +31,14 @@ public class IndexAction implements CommandAction {
 			request.getSession().setAttribute("id", id);
 			request.getSession().setAttribute("type", new Integer(0));
 			System.out.println("관리자 로그인 성공");
+			
+			//login시 세션에 등록
+			HttpSession session = request.getSession();
+			ArrayList<MenuBean> bean=new ArrayList<>();
+			bean=dbPro.getMenuList();
+			System.out.println(bean.get(0).getMenu_code());
+			session.setAttribute("menu", dbPro.getMenuList());
+			
 			return "/loginPro.jsp";
 		}else if (authority == 0 && check == 1) {//직원 로그인 성공
 			request.getSession().setAttribute("id", id);
