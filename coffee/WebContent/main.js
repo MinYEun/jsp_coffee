@@ -58,11 +58,13 @@ $(document).ready(function() {
 		});
 	});
 	
-	//고객 조회 삭제
+	//고객 조회
 	$("#cus_sd").click(function() {
 		$.ajax({
+			type : "post",
+			url : "/coffee/mCusSelDel.do",
 			success : function(data) {
-				window.location.href = "/coffee/mCusDel.do";
+				window.location.href = "/coffee/mCusSelDel.do";
 			}
 		});
 	});

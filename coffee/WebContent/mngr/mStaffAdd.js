@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	
 	$("#add").click(function(){
-		alert("되는거맞지;?");
 		
 		var query= {
 				
@@ -20,7 +19,7 @@ $(document).ready(function(){
 			data : query,
 			success : function(data) {
 				
-				alert("ok");
+				alert("추가 성공");
 				
 			}
 		});
