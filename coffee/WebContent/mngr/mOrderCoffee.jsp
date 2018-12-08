@@ -27,15 +27,15 @@
 						<c:forEach var="m" items="${menu}">
 						<c:if test="${m.class_code == 001}">
 							<div class = "menulist_coff">
-							<button id="list_coff">
-<%-- 								<div class="menu_code">${m.menu_code}</div> --%>
+							<button class ="list_coff">
+<%--								<div class="menu_code">${m.menu_code}</div> --%>
 <%-- 								<div class="class_code">${m.class_code}</div> --%>
 								<div class="img">
 									<img src="/coffee/images/${m.img}" />
 								</div>
 								<div class="menu_name">${m.menu_name}</div>
 								<div class="price">${m.price}</div>
-								</button>
+							</button>
 							</div>
 						</c:if>
 						</c:forEach>
@@ -94,7 +94,7 @@
 			</div>
 				<div class="order_list">
 					<div id="list">
-						주문 목록<br> <input type="text" width="50px" placeholder="메뉴 명">
+						주문 목록<br> <!-- <input type="text" width="50px" placeholder="메뉴 명"> -->
 						<!-- 			<select name="number"> -->
 						<!-- 				<option>1</option> -->
 						<!-- 				<option>2</option> -->
