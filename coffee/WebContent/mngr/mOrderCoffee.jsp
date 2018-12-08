@@ -27,6 +27,7 @@
 						<c:forEach var="m" items="${menu}">
 						<c:if test="${m.class_code == 001}">
 							<div class = "menulist_coff">
+							<button id="list_coff">
 <%-- 								<div class="menu_code">${m.menu_code}</div> --%>
 <%-- 								<div class="class_code">${m.class_code}</div> --%>
 								<div class="img">
@@ -34,6 +35,7 @@
 								</div>
 								<div class="menu_name">${m.menu_name}</div>
 								<div class="price">${m.price}</div>
+								</button>
 							</div>
 						</c:if>
 						</c:forEach>
@@ -41,6 +43,7 @@
 						<c:forEach var="m" items="${menu}">
 						<c:if test="${m.class_code == 002}">
 							<div class = "menulist_smo">
+							<button id="list_smo">
 <%-- 								<div class="menu_code">${m.menu_code}</div> --%>
 <%-- 								<div class="class_code">${m.class_code}</div> --%>
 								<div class="img">
@@ -48,6 +51,7 @@
 								</div>
 								<div class="menu_name">${m.menu_name}</div>
 								<div class="price">${m.price}</div>
+							</button>
 							</div>
 						</c:if>
 						</c:forEach>
@@ -55,6 +59,7 @@
 						<c:forEach var="m" items="${menu}">
 						<c:if test="${m.class_code == 003}">
 							<div class = "menulist_ade">
+							<button id="list_ade">
 <%-- 								<div class="menu_code">${m.menu_code}</div> --%>
 <%-- 								<div class="class_code">${m.class_code}</div> --%>
 								<div class="img">
@@ -62,6 +67,7 @@
 								</div>
 								<div class="menu_name">${m.menu_name}</div>
 								<div class="price">${m.price}</div>
+							</button>
 							</div>
 						</c:if>
 						</c:forEach>
@@ -69,6 +75,7 @@
 						<c:forEach var="m" items="${menu}">
 						<c:if test="${m.class_code == 004}">
 							<div class = "menulist_side">
+							<button id="list_side">
 <%-- 								<div class="menu_code">${m.menu_code}</div> --%>
 <%-- 								<div class="class_code">${m.class_code}</div> --%>
 								<div class="img">
@@ -76,6 +83,7 @@
 								</div>
 								<div class="menu_name">${m.menu_name}</div>
 								<div class="price">${m.price}</div>
+							</button>
 							</div>
 						</c:if>
 						</c:forEach>

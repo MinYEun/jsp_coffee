@@ -116,7 +116,7 @@ html, body {
 	text-align: left;
 }
 
-#menu_class>button {
+#menu_class > button {
 	display: inline;
 	background-color: white;
 	color: black;
@@ -130,7 +130,7 @@ html, body {
 	margin-bottom: 40px;
 }
 
-#menu_class>button:hover {
+#menu_class > button:hover {
 	background-color: black;
 	color: white;
 	border: 2px solid white;
@@ -149,7 +149,7 @@ html, body {
 	overflow: hidden;
 }
 
-.list_wrap>div {
+.list_wrap > div {
 	float: left;
 	margin: 10px;
 	width: 200px;
@@ -160,27 +160,18 @@ html, body {
 	width: 70%;
 	height: 70%;
 }
-/*-------------------------------------------------*/
-/* .list_wrap2 { */
-/* 	position: absolute; */
-/* 	text-align: center; */
-/* 	margin-top: 400px; */
-/* 	max-width: 100%; */
-/* 	max-heidth: 100%; */
-/* } */
 
-/* .list_wrap2>div { */
+.list_wrap button{ 
+	background-color: white;
+}
+
+/* .list_wrap > button { */
 /* 	float: left; */
 /* 	margin: 10px; */
 /* 	width: 200px; */
 /* 	height: 250px; */
 /* } */
 
-/* .list_wrap2 img { */
-/* 	width: 70%; */
-/* 	height: 70%; */
-/* } */
-/*-------------------------------------------------*/
 .order_list {
 	width: 400px;
 	height: 760px;
@@ -209,5 +200,5 @@ html, body {
 
 #price {
 	margin-bottom: 10px;
-
 }
+
