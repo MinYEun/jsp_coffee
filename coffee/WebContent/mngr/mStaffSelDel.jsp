@@ -4,7 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script src="/coffee/mngr/mStaffDel.js"></script>
 <meta charset="UTF-8">
-
 <!-- 테이블 스타일 -->
 <style>
 table {
@@ -19,7 +18,7 @@ table {
 </style>
 
 <div class="stf_sd">
-	<h1>직원관리 ─ 조회/삭제</h1>
+	<h1>직원관리 ─ 삭제</h1>
 	<hr />
 	<div id="staff">
 		<div id="staff_sel">

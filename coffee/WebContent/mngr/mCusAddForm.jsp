@@ -9,11 +9,6 @@
 	<div class="cus_add">
 		<h1>고객관리 ─ 추가</h1>
 		<hr />
-		<div id="logo_img">
-			<img src="/coffee/images/coffee.jpg" alt="logo" width="350px"
-				height="200px" />
-		</div>
-
 		<div class="inner">
 			<table height="200px" align="center">
 				<tr>

@@ -1,10 +1,11 @@
 @charset "EUC-KR";
 .stf_sd {
-	width: 1400px;
-	height: 810px;
-	float: right;
-	position: relative;
-	overflow: hidden;
+	width: 1500px;
+	height: 600px;
+	transform: translatex(20%);
+	display: inline-block;
+	background-color: white;
+	margin-top: -9px;
 }
 
 #staff {

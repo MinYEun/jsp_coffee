@@ -20,7 +20,7 @@ table {
 
 <meta charset="UTF-8">
 <div class="stf_sd">
-	<h1>고객관리 ─ 조회/삭제</h1>
+	<h1>고객관리 ─ 삭제</h1>
 	<hr />
 	<div id="cus">
 		<div id="cus_sel">

@@ -100,6 +100,7 @@ public class MngrDBBean {
 		}
 	}
 
+	//관리자, 직원 구분
 	public int confirmAuthority(String id) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -171,6 +172,41 @@ public class MngrDBBean {
 		return jsonArray;
 	}
 
+	 //특정 직원 조회
+	public JSONArray oneSelectStaff(String stf_code){
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      ResultSet rs = null;
+	      JSONObject jsonObject;
+	      JSONArray jsonArray = new JSONArray();
+	         
+	      try {
+	         conn = getConnection();
+	            
+	         String sql = "select * from staff where stf_code = ?";
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, stf_code);
+	         rs = pstmt.executeQuery();
+	         while(rs.next()) {
+	            jsonObject = new JSONObject();
+	            jsonObject.put("stf_code",rs.getString("stf_code"));
+	            jsonObject.put("name",rs.getString("name"));
+	            jsonObject.put("passwd",rs.getString("passwd"));
+	            jsonObject.put("ph_num",rs.getString("ph_num"));
+	            jsonArray.add(jsonObject);
+	         }
+	      }catch(Exception e) {
+	         System.out.println("특정 직원 조회 오류.");
+	      }finally {
+	         if(rs!=null)try {rs.close();}catch(Exception e) {}
+	         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+	         if(conn!=null)try {conn.close();}catch(Exception e) {}
+	      }
+	      return jsonArray;
+	   }
+
+	
+	//직원 삭제
 	public void deleteStaff(String id){
 	        Connection conn = null;
 	        PreparedStatement pstmt = null;
@@ -199,9 +235,6 @@ public class MngrDBBean {
 	// 관리자 직원 등급 체크하는 메소드
 	
 	// 관리자 직원 등급 체크하는 메소드
-	
-	
-	
 	
 	
 	////////////////////////////고객 관리 메소드/////////////////////////////////
@@ -268,6 +301,39 @@ public class MngrDBBean {
 		return jsonArray;
 	}
 	
+	 //특정 고객 조회
+	   public JSONArray oneSelectCus(String phone){
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      ResultSet rs = null;
+	      JSONObject jsonObject;
+	      JSONArray jsonArray = new JSONArray();
+	         
+	      try {
+	         conn = getConnection();
+	            
+	         String sql = "select * from customer where cus_code = ?";
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, phone);
+	         rs = pstmt.executeQuery();
+	         while(rs.next()) {
+	            jsonObject = new JSONObject();
+	            jsonObject.put("cus_code",rs.getString("cus_code"));
+	            jsonObject.put("cus_name",rs.getString("cus_name"));
+	            jsonObject.put("cus_ponit",rs.getInt("cus_ponit"));
+	            jsonArray.add(jsonObject);
+	         }
+	      }catch(Exception e) {
+	         System.out.println("특정 고객 조회 오류.");
+	      }finally {
+	         if(rs!=null)try {rs.close();}catch(Exception e) {}
+	         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+	         if(conn!=null)try {conn.close();}catch(Exception e) {}
+	      }
+	      return jsonArray;
+	   }
+
+	
 	//고객 삭제
 	public void deleteCus(String id){
         Connection conn = null;
@@ -290,8 +356,32 @@ public class MngrDBBean {
         	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
         }
         System.out.println("delete cus_code: " + id);
-}
+	}
 	
+	//고객 수정
+	public void updateCus(String phone,String af_phone) {
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      ResultSet rs = null;
+	      try {
+	         conn = getConnection();
+	            
+	         String sql = "update customer set cus_code=? where cus_code=?";
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, af_phone);
+	         pstmt.setString(2, phone);
+	         pstmt.executeUpdate();
+	      }catch(Exception e) {
+	         System.out.println("고객 수정 오류.");
+	      }finally {
+	         if(rs!=null)try {rs.close();}catch(Exception e) {}
+	         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+	         if(conn!=null)try {conn.close();}catch(Exception e) {}
+	      }
+	   }
+
+    
+
 	
 	//메뉴 세션 저장
 	   public ArrayList<MenuBean> getMenuList(){

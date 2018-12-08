@@ -37,8 +37,17 @@ $(document).ready(function() {
 			}
 		});
 	});
+	
+	//직원 조회
+	$("#staff_sel").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/mStaffSel.do";
+			}
+		});
+	});
 
-	//직원 조회 삭제
+	//직원 삭제
 	$("#staff_sd").click(function() {
 		$.ajax({
 			type : "post",
@@ -59,7 +68,25 @@ $(document).ready(function() {
 	});
 	
 	//고객 조회
-	$("#cus_sd").click(function() {
+	$("#cus_sel").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/mCusSel.do";
+			}
+		});
+	});
+	
+	//고객 수정
+	$("#cus_mod").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/mCusMod.do";
+			}
+		});
+	});
+	
+	//고객 삭제
+	$("#cus_del").click(function() {
 		$.ajax({
 			type : "post",
 			url : "/coffee/mCusSelDel.do",
