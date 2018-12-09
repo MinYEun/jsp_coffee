@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<script src="/coffee/js/mOrderHS.js"></script>
+<script src="/coffee/js/mmenuList.js"></script>
 <link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet"
 	type="text/css">
 <c:if test="${empty sessionScope.id }">

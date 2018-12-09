@@ -42,5 +42,5 @@ $(document).ready(function(){
 		var name = $(".list_coff:eq("+n+") div:eq(1)").text();
 		var price = $(".list_coff:eq("+n+") div:eq(2)").text();
 		console.log(name);
-	$("#list").append(name + price + "<br>");
+	$("#list").append(name + '&nbsp' + price + "<input type='number' name='quantity' value='1' min='1' max='100'  />" +'&nbsp'+ "<br>");
 	});
