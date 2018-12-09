@@ -3,10 +3,10 @@
 h1{
 	letter-spacing: 5px;
 }
-.point_sel{
+.poi_sel{
 	width: 1400px;
 	height: 810px;
-	float: right;
+	transform: translatex(20%);
 	position: relative;
 	overflow: hidden;
 	

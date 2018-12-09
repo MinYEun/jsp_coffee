@@ -6,12 +6,11 @@ html{
 h1 { letter-spacing: 5px;}
 	
 	.menu_side{
-		width: 1400px;
-		height: 810px;
-		float: right;
-		position: relative;
-		overflow: auto;
-		
+	width: 1400px;
+	height: 810px;
+	transform: translatex(20%);
+	position: relative;
+	overflow: hidden;
 	}
 
 	#menu_class{

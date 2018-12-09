@@ -1,17 +1,16 @@
 @charset "EUC-KR";
-
-@charset "EUC-KR";
 html{
 	overflow-y:hidden;
 	}
+
 	
 	
 	.menu_smo{
-		width: 1400px;
-		height: 810px;
-		float: right;
-		position: relative;
-		overflow: auto;
+	width: 1400px;
+	height: 810px;
+	transform: translatex(20%);
+	position: relative;
+	overflow: hidden;
 		
 	}
 

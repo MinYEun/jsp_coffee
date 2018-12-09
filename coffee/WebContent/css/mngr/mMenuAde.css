@@ -10,10 +10,10 @@ html{
 
 	.menu_ade{
 		width: 1400px;
-		height: 810px;
-		float: right;
-		position: relative;
-		overflow: auto;
+	height: 810px;
+	transform: translatex(20%);
+	position: relative;
+	overflow: hidden;
 		
 	}
 

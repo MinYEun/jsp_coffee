@@ -29,6 +29,15 @@ $(document).ready(function() {
 		});
 	});	
 	
+	//메뉴 조회 수정
+	$("#point_sel").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/mPoint.do";
+			}
+		});
+	});	
+	
 	//직원 추가
 	$("#staff_add").click(function() {
 		$.ajax({

@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mPoint.css" />
-<script>
-	var redata = prompt("고객 번호를 입력하세요." ,"Customer Number");
-</script>
+<!-- <script> -->
+// 	var redata = prompt("고객 번호를 입력하세요." ,"Customer Number");
+<!-- </script> -->
 
 <div class="poi_sel">
 	<h1>적립금관리　　─　　조회</h1>
