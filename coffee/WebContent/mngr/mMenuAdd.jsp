@@ -20,7 +20,7 @@
 </script>
 
 <script src="/coffee/js/mMenu.js"></script>
-			<div class="ch_screen">
+			<div class="menu_add">
 			<h1>메뉴관리　　─　　추가</h1>
 			<hr/>
 			<div id="menu_image">
