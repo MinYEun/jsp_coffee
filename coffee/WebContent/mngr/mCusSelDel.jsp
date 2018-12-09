@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="/coffee/css/mngr/mStaffSelDel.css" />
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<script src="/coffee/mngr/mStaffDel.js"></script>
-<meta charset="UTF-8">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script src="/coffee/mngr/mCusDel.js"></script>
+
 <!-- 테이블 스타일 -->
 <style>
 table {
-    width: 90%;
+    width: 50%;
     border-top: 1px solid #444444;
     border-collapse: collapse;
   }
@@ -17,26 +17,27 @@ table {
   }
 </style>
 
+
+<meta charset="UTF-8">
 <div class="stf_sd">
-	<h1>직원관리 ─ 삭제</h1>
+	<h1>고객관리 ─ 삭제</h1>
 	<hr />
-	<div id="staff">
-		<div id="staff_sel">
+	<div id="cus">
+		<div id="cus_sel">
 			<table id="list">
 				<tr>
 					<th></th>
-					<th>직원 코드</th>
-					<th>직원 이름</th>
-					<th>직원 휴대폰</th>
+					<th>고객 코드</th>
+					<th>고객 이름</th>
+					<th>고객 포인트</th>
 				</tr>
-				<c:forEach var="e" items="${sessionScope.staffList}">
+				<c:forEach var="e" items="${sessionScope.CusList}">
 					<tr>
 						<td class="elist"><input class="check" type="radio"
-						name="check" id="radio_id" value="${e.stf_code}">
-						</td>
-						<td class="elist">${e.stf_code}</td>
-						<td class="elist">${e.name}</td>
-						<td class="elist">${e.ph_num}</td>
+							name="check" id="radio_id" value="${e.cus_code}"></td>
+						<td class="elist">${e.cus_code}</td>
+						<td class="elist">${e.cus_name}</td>
+						<td class="elist">${e.cus_point}</td>
 					</tr>
 				</c:forEach>
 			</table>

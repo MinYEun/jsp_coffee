@@ -12,9 +12,6 @@
 			<h1>직원관리　　─　　추가</h1>
 			<hr/>
 			<div id="staff">
-				<div id="logo">
-					<img id="logo" width="400px" height="120px" alt="logo" src="/coffee/images/loginlogo.PNG" />
-				</div>
 				<div id="staff_inf">
 					Staff Number <input type="text" id="stf_num" name="stf_num" style="width:200px; height:20px">
 					Name <input type="text" id="stf_name" name="stf_name" style="width:200px; height:20px">
