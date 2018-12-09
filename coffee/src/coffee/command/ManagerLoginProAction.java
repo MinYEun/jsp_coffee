@@ -28,14 +28,11 @@ public class ManagerLoginProAction implements CommandAction {
         //해당 뷰(응답페이지)로 보낼 내용을 request속성에 지정
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
-<<<<<<< HEAD
 		
 		//login시 세션에 등록
-		HttpSession session = request.getSession();
-=======
+		//HttpSession session = request.getSession();
 //		//login시 세션에 등록
 //		HttpSession session = request.getSession();
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 //		ArrayList<MenuBean> bean=new ArrayList<>();
 //		bean=dbPro.getMenuList();
 //		System.out.println(bean.get(0).getMenu_code());

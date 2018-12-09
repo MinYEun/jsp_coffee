@@ -5,12 +5,10 @@ style>html {
 	background-color: #ebdacf;
 	overflow: hidden;
 }
-
-
 .order_smo {
 	width: 70%;
 	height: 810px;
-/* 	transform: translateX(30%); */
+	/* 	transform: translateX(30%); */
 	float: left;
 	position: relative;
 	overflow: auto;
@@ -23,7 +21,7 @@ style>html {
 	text-align: left;
 }
 
-#menu_class > button {
+#menu_class>button {
 	display: inline;
 	background-color: white;
 	color: black;
@@ -37,13 +35,11 @@ style>html {
 	margin-bottom: 40px;
 }
 
-#menu_class > button:hover {
+#menu_class>button:hover {
 	background-color: black;
 	color: white;
 	border: 2px solid white;
 }
-
-
 
 #menu_class {
 	float: left;

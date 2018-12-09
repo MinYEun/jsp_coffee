@@ -107,9 +107,12 @@ $(document).ready(function() {
 	
 	//매출 관리
 	$("#sal_sel").click(function() {
+		alert("매출 버튼 클릭 성공")
 		$.ajax({
-			success : function(data) {
-				window.location.href = "/coffee/mSalesMngr.do";
+			type : "post",
+			url : "/coffee/salesPro.do",
+			success:function(data){
+				window.location.href="/coffee/salesMain.do";
 			}
 		});
 	});	

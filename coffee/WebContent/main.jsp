@@ -96,29 +96,28 @@
 					<ul>
 						<li>고객관리
 							<ul>
-								<li><button id="cus_add">추가</button> <li><button id="cus_sd">조회/삭제</button>
-						
+								<li><button id="cus_add">추가</button>
+								<li><button id="cus_sel">조회</button>
+								<li><button id="cus_mod">수정</button>
+								<li><button id="cus_del">삭제</button>
 							</ul>
-				
 					</ul>
-			</div>
-			<div class="order_mn">
-				<ul>
-					<li>주문관리
-						<ul>
-							<li><button id="order_add">추가</button>
-						
+				</div>
+				<div class="order_mn">
+					<ul>
+						<li>주문관리
+							<ul>
+								<li><button id="order_add">추가</button>
 							</ul>
-				
 					</ul>
+				</div>
+			</span>
+			<div class="status">
+				xxx님 안녕하세요
+				<button id="logout" type="button">로그아웃</button>
+				<div id="content" class="box2"></div>
 			</div>
-		</span>
-		<div class="status">
-			xxx님 안녕하세요
-			<button id="logout" type="button">로그아웃</button>
-			<div id="content" class="box2"></div>
-		</div>
-	</c:if>
+		</c:if>
 	</div>
 	<!-- 로그인 실패 -->
 	<c:if test="${type == 2}">

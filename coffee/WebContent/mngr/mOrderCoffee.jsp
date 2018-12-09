@@ -7,9 +7,6 @@
 <script src="/coffee/js/mmenuList.js"></script>
 <link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet"
 	type="text/css">
-<c:if test="${empty sessionScope.id }">
-	<jsp:forward page="/Start.jsp" />
-</c:if>
 <c:if test="${not empty sessionScope.id }">
 	<div class="ordercoff">
 		<div class="menu">

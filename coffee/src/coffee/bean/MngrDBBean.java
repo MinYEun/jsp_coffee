@@ -229,17 +229,8 @@ public class MngrDBBean {
 	        System.out.println("delete stf_code: " + id);
 	}
 	
-
-	// 관리자 직원 등급 체크하는 메소드
-
-	// 관리자 직원 등급 체크하는 메소드
-	
-	// 관리자 직원 등급 체크하는 메소드
-	
-	
-<<<<<<< HEAD
 	////////////////////////////고객 관리 메소드/////////////////////////////////
-=======
+
 	 //메뉴 세션 저장
 	public ArrayList<MenuBean> getMenuList(){
 		ArrayList<MenuBean> list = null;
@@ -282,8 +273,6 @@ public class MngrDBBean {
 		return list;
 	
 	}
-	
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 	
 	//고객 추가
 	public void insertCus(String phone, String name) {
@@ -424,50 +413,5 @@ public class MngrDBBean {
 	         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
 	         if(conn!=null)try {conn.close();}catch(Exception e) {}
 	      }
-	   }
-
-    
-
-	
-	//메뉴 세션 저장
-	   public ArrayList<MenuBean> getMenuList(){
-	      ArrayList<MenuBean> list = null;
-	      PreparedStatement pstmt = null;
-	      ResultSet rs = null;
-	      Connection conn = null;
-	   
-	      try {
-	      Context initCtx = new InitialContext();
-	      Context envCtx = (Context) initCtx.lookup("java:comp/env");
-	      DataSource ds = (DataSource)envCtx.lookup("jdbc/TestDB");
-	      conn = ds.getConnection();
-	      list = new ArrayList<>();
-	      
-	      String sql = "select * from menu";
-	      pstmt = conn.prepareStatement(sql);
-	      rs = pstmt.executeQuery();
-	      
-	      while(rs.next()) {
-	         MenuBean m = new MenuBean();
-	         m.setMenu_code(rs.getString("_id"));
-	         m.setClass_code(rs.getString("detail"));
-	         m.setMenu_name(rs.getString("done"));
-	         m.setPrice(rs.getInt("Price"));
-	         m.setImg(rs.getString("img"));
-	         list.add(m);
-	      }
-	      
-	      
-	      }catch(Exception e) {
-	         e.printStackTrace();
-	      }finally{
-	         if(rs!=null)
-	            try{rs.close();}catch(SQLException sqle){}
-	         if(pstmt!=null)
-	            try{pstmt.close();}catch(SQLException sqle){}
-	         if(conn!=null)
-	            try{conn.close();}catch(SQLException sqle){}
-	      }
-	      return list;
 	   }
 }
