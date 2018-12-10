@@ -37,7 +37,7 @@ table {
 							name="check" id="radio_id" value="${e.cus_code}"></td>
 						<td class="elist">${e.cus_code}</td>
 						<td class="elist">${e.cus_name}</td>
-						<td class="elist">${e.cus_point}</td>
+						<td class="elist">${e.cus_ponit}</td>
 					</tr>
 				</c:forEach>
 			</table>

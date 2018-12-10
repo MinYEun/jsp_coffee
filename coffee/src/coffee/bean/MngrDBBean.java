@@ -226,7 +226,6 @@ public class MngrDBBean {
 	        	if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
 	        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
 	        }
-	        System.out.println("delete stf_code: " + id);
 	}
 	
 	////////////////////////////고객 관리 메소드/////////////////////////////////
@@ -369,28 +368,24 @@ public class MngrDBBean {
 	   }
 
 	
-	//고객 삭제
+	 //직원 삭제
 	public void deleteCus(String id){
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-        ResultSet rs= null;
-	
-        try {
+			Connection conn = null;
+		    PreparedStatement pstmt = null;
+		    ResultSet rs= null;
+			System.out.println(id + "이까지오냐?");
+		    try {
 			conn = getConnection();
-
-			String sql = "delete from customer where cus_code = ?";
-				pstmt = conn.prepareStatement(sql);
+				pstmt = conn.prepareStatement("delete from customer where cus_code = ?");
 				pstmt.setString(1, id);
 				pstmt.executeUpdate();
-
-        } catch(Exception ex) {
-        	ex.printStackTrace();
-        } finally {
-        	if (rs != null) try { rs.close(); } catch(SQLException ex) {}
-        	if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
-        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
-        }
-        System.out.println("delete cus_code: " + id);
+		    } catch(Exception ex) {
+		       	ex.printStackTrace();
+		    } finally {
+		     if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+		     if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+		     if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		    }
 	}
 	
 	//고객 수정
