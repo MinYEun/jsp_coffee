@@ -228,15 +228,7 @@ public class MngrDBBean {
 	        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
 	        }
 	}
-<<<<<<< HEAD
 
-
-=======
-	
-	////////////////////////////메뉴 관리 메소드/////////////////////////////////
-	
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
-	 //메뉴 세션 저장
 	public ArrayList<MenuBean> getMenuList(){
 		ArrayList<MenuBean> list = null;
 		PreparedStatement pstmt = null;
@@ -489,7 +481,7 @@ public class MngrDBBean {
 		}
 		
 		// 고객 포인트 조회
-		public JSONArray selectPoint() {
+		public JSONArray selectPoint(String cus_code) {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
@@ -501,6 +493,7 @@ public class MngrDBBean {
 
 				String sql = "select * from customer where cus_code = ?";
 				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, cus_code); 
 				rs = pstmt.executeQuery();
 				
 				while(rs.next()){

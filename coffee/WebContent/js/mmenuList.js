@@ -78,6 +78,7 @@ function totalprice(){
 	$("#total").val(totalprice);
 } 
 
+
 $(document).on("click",".num",function(){
     var num = $(this);
     var n = $(".num").index();
@@ -102,7 +103,7 @@ $(document).on("click",".num",function(){
 		
 		var name = $(".list_coff:eq("+n+") div:eq(1)").text();
 		var price = $(".list_coff:eq("+n+") div:eq(2)").text();
-<<<<<<< HEAD
+
 	$("#list").append('<div class="aa">' 
 						+ "<div class='n'>" + name +"</div>"+ '&nbsp' 
 			 			+ "<div class='p'>" + price +"</div>" + '&nbsp' 
@@ -164,18 +165,11 @@ $(document).on("click",".num",function(){
 		
 		});
 	
-	$(document).on("click", "#cus_ph", function(){
-		//결제 눌렀을 때
+	$(document).on("click", "#cus_poi", function(){
+		//조회 눌렀을 때
 		window.open("/coffee/mngr/mCusPoSel.jsp", "newWindow" ,"width=800, height=700, resizable=yes");
 
-	})
-
-
-
-
-
-=======
-		console.log(name);
-	$("#list").append(name + '&nbsp' + price + "<input type='number' name='quantity' value='1' min='1' max='100'  />" +'&nbsp'+ "<br>");
 	});
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
+
+
+
