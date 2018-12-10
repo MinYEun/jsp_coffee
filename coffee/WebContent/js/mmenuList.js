@@ -125,10 +125,10 @@ $(document).on("click",".num",function(){
 		
 		});
 	
-	$(document).on("click", "btn_p", function(){
-		//계산 눌렀을 때
-		
-		
+	$(document).on("click", "#cus_ph", function(){
+		//결제 눌렀을 때
+		window.open("/coffee/mngr/mCusPoSel.jsp", "newWindow" ,"width=800, height=700, resizable=yes");
+
 	})
 
 

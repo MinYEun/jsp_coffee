@@ -14,7 +14,9 @@ public class ManagerCusSelDelAction implements CommandAction {
 		MngrDBBean dbPro = MngrDBBean.getInstance();
 
 		request.getSession().setAttribute("CusList", dbPro.selectCus());
-
+		
+		System.out.println(dbPro.selectCus());
+		
 		return "/mngr/mCusSelDel.jsp";
 	}
 

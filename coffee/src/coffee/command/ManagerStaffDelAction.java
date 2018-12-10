@@ -11,7 +11,7 @@ public class ManagerStaffDelAction implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		// TODO Auto-generated method stub
 		
-		System.out.println("ManagerStaffAction");
+		System.out.println("ManagerStaffDelAction");
 		String stf_code = request.getParameter("stf_code");
 
 	    // DB와 연동해서 사용자의 인증을 처리

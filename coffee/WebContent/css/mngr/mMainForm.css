@@ -9,7 +9,7 @@ html, body {
 .ordercoff {
 	width: 1500px;
 	height: 980px;
-	transform: translatex(30%);
+	transform: translatex(20%);
 	display: inline-block;
 	background-color: white;
 	margin-top: -9px;
