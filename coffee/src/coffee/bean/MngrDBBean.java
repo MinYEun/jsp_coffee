@@ -228,8 +228,14 @@ public class MngrDBBean {
 	        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
 	        }
 	}
+<<<<<<< HEAD
 
 
+=======
+	
+	////////////////////////////메뉴 관리 메소드/////////////////////////////////
+	
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 	 //메뉴 세션 저장
 	public ArrayList<MenuBean> getMenuList(){
 		ArrayList<MenuBean> list = null;
@@ -273,6 +279,54 @@ public class MngrDBBean {
 	
 	}
 	
+	
+	
+	//메뉴 수정
+	public void updateMenu(String menu_name,int af_price) {
+		   Connection conn = null;
+		   PreparedStatement pstmt = null;
+		   ResultSet rs = null;
+		   try {
+		      conn = getConnection();
+		            
+		      String sql = "update menu set price=? where menu_name=?";
+		      pstmt = conn.prepareStatement(sql);
+		      pstmt.setInt(1, af_price);
+		      pstmt.setString(2, menu_name);
+		      pstmt.executeUpdate();
+		   }catch(Exception e) {
+		      System.out.println("고객 수정 오류.");
+		   }finally {
+		      if(rs!=null)try {rs.close();}catch(Exception e) {}
+		      if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+		      if(conn!=null)try {conn.close();}catch(Exception e) {}
+		      }
+	}
+	
+	//메뉴 삭제
+		public void deleteMenu(String menu_name){
+		        Connection conn = null;
+		        PreparedStatement pstmt = null;
+		        ResultSet rs= null;
+			
+		        try {
+					conn = getConnection();
+
+						pstmt = conn.prepareStatement("delete from menu where menu_name = ?");
+						pstmt.setString(1, menu_name);
+						pstmt.executeUpdate();
+
+		        } catch(Exception ex) {
+		        	ex.printStackTrace();
+		        } finally {
+		        	if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+		        	if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+		        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		        }
+		}
+	
+	////////////////////////////고객 관리 메소드/////////////////////////////////
+
 	//고객 추가
 	public void insertCus(String phone, String name) {
 		Connection conn = null;
@@ -368,7 +422,7 @@ public class MngrDBBean {
 	   }
 
 	
-	 //직원 삭제
+	 //고객 삭제
 	public void deleteCus(String id){
 			Connection conn = null;
 		    PreparedStatement pstmt = null;

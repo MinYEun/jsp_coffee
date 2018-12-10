@@ -13,6 +13,7 @@
 <title>main.jsp</title>
 </head>
 <body>
+
 	<!-- 관리자 메뉴 바 -->
 	<div class="m_menu">
 		<c:if test="${type == 0 }">
@@ -26,7 +27,8 @@
 						<li>메뉴관리</li>
 						<ul>
 							<li><button type="button" id="menu_add">추가</button>
-							<li><button id="menu_md">수정/삭제</button>
+							<li><button id="menu_md">수정</button>
+							<li><button id="menu_del">삭제</button>
 						</ul>
 					</ul>
 				</div>

@@ -97,7 +97,7 @@ html, body {
 
 .menu_md {
 	width: 900px;
-	height: 810px;
+	height: 700px;
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -235,3 +235,6 @@ html, body {
 	font-size: 20px;
 }
 
+#btn #btn_mod{
+	border: 1px soild black;
+}
