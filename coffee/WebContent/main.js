@@ -20,11 +20,20 @@ $(document).ready(function() {
 		});
 	});
 	
-	//메뉴 조회 수정
+	//메뉴 수정
 	$("#menu_md").click(function() {
 		$.ajax({
 			success : function(data) {
 				window.location.href = "/coffee/mMenuCoff.do";
+			}
+		});
+	});	
+	
+	//메뉴 삭제
+	$("#menu_del").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/m.do";
 			}
 		});
 	});	
