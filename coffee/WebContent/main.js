@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$("#menu_del").click(function() {
 		$.ajax({
 			success : function(data) {
-				window.location.href = "/coffee/m.do";
+				window.location.href = "/coffee/mMenuDel.do";
 			}
 		});
 	});	

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+//상단 메뉴바 show, hide
 	$(".menulist_coff").show();
 	$(".menulist_smo").hide();
 	$(".menulist_ade").hide();
@@ -27,6 +28,43 @@ $(document).ready(function(){
 		$(".menulist_smo").hide();
 		$(".menulist_ade").hide();
 		$(".menulist_side").show();
+	});
+	
+	
+	//메뉴 수정 버튼 눌렀을때
+	$("#btn_mod").click(function(){
+		alert($("#menu_name").val());
+		alert($("#af_price").val());
+		var query = {
+				menu_name : $("#menu_name").val(),
+				af_price : $("#af_price").val()
+		};
+		$.ajax({
+			type : "post",
+			url : "/coffee/mMenuMod.do",
+			data : query,
+			success : function(){
+				window.location.href = "/coffee/mMenuCoff.do";
+			}
+		});
+	});
+	
+	//메뉴 삭제 버튼 눌렀을때
+	$("#btn_del").click(function(){
+		alert($("input[name='check']:checked").val());
+		alert("메뉴 삭제버튼 누름");
+		var query = {
+				menu_name : $("input[name='check']:checked").val()
+				//그냥 체크한 name값을 확인해서 내가 원하는 체크박스를 불러옴
+		};
+		$.ajax({
+			type : "post",
+			url : "/coffee/mMenuDel.do",
+			data : query,
+			success : function(){
+				window.location.href = "/coffee/mMenuCoff.do";
+			}
+		});
 	});
 });
 

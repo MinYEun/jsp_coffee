@@ -13,6 +13,7 @@
 <title>main.jsp</title>
 </head>
 <body>
+
 	<!-- 관리자 메뉴 바 -->
 	<div class="m_menu">
 		<c:if test="${type == 0 }">
