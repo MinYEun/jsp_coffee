@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="/coffee/css/mngr/mStaffSelDel.css" />
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" />
 <script src="/coffee/mngr/mCusDel.js"></script>
 
 <!-- 테이블 스타일 -->

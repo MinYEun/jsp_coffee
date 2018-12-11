@@ -3,16 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="/coffee/css/mngr/mMainForm.css" rel="stylesheet"
 	type="text/css">
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/coffee/main.js"></script>
 <title>main.jsp</title>
-</head>
-<body>
+
 
 	<!-- 관리자 메뉴 바 -->
 	<div class="m_menu">
@@ -132,5 +127,3 @@
 			<jsp:include page="${cont}" />
 		</c:if>
 	</div>
-</body>
-</html>
