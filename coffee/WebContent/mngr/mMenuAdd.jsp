@@ -4,6 +4,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/coffee/css/mngr/mMenuAdd.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/coffee/js/mMenu.js"></script>
+
 <script>
  	$(document).ready(function(){ 
 		$("#uplaod").on("change", loadFile); 
@@ -19,7 +21,6 @@
  	} 
 </script>
 
-<script src="/coffee/js/mMenu.js"></script>
 	<div class="menu_add">
 	<h1>메뉴관리　─　추가</h1>
 	<hr/>
@@ -29,10 +30,10 @@
 		</div>
 	<span id="file_inf">
 		<select id="inf">
-			<option>COFFEE</option>
-			<option>SMOOTHEI</option>
-			<option>ADE</option>
-			<option>SIDE MENU</option>
+			<option value="001">COFFEE</option>
+			<option value="002">SMOOTHEI</option>
+			<option value="003">ADE</option>
+			<option value="004">SIDE MENU</option>
 		</select>
 		<br/>
 		<br/>
@@ -51,4 +52,5 @@
 		<input type="submit" id="file_add" value="메뉴추가" />
 	</div>
 	</div>
+</div>
 		

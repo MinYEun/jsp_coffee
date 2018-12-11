@@ -229,6 +229,9 @@ public class MngrDBBean {
 	        }
 	}
 
+	//////////////////////////메뉴 관리//////////////////////////////
+	
+	//메뉴 조회
 	public ArrayList<MenuBean> getMenuList(){
 		ArrayList<MenuBean> list = null;
 		PreparedStatement pstmt = null;
@@ -251,7 +254,7 @@ public class MngrDBBean {
 			m.setMenu_code(rs.getString("menu_code"));
 			m.setClass_code(rs.getString("class_code"));
 			m.setMenu_name(rs.getString("menu_name"));
-			m.setPrice(rs.getInt("price"));
+			m.setPrice(rs.getString("price"));
 			m.setImg(rs.getString("img"));
 			list.add(m);
 		}
@@ -272,7 +275,36 @@ public class MngrDBBean {
 	}
 	
 	
-	
+	//메뉴 추가
+	public void insertProduct(MenuBean product) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = getConnection();
+			String sql = "insert into menu(class_code, menu_name, price, img) values(?,?,?,?)";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, product.getClass_code());
+			pstmt.setString(2, product.getMenu_name());
+			pstmt.setString(3, product.getPrice());
+			pstmt.setString(4, product.getImg());
+			pstmt.executeUpdate();
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {rs.close();} catch (SQLException ex) {}
+			if (pstmt != null)
+				try {pstmt.close();} catch (SQLException ex) {}
+			if (conn != null)
+				try {conn.close();} catch (SQLException ex) {}
+		}
+		
+	}
+			
 	//메뉴 수정
 	public void updateMenu(String menu_name,int af_price) {
 		   Connection conn = null;
@@ -515,4 +547,6 @@ public class MngrDBBean {
 			}
 			return jsonArray;
 		}
+
+		
 }
