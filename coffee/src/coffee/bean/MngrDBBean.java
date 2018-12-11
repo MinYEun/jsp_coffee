@@ -254,7 +254,7 @@ public class MngrDBBean {
 			m.setMenu_code(rs.getString("menu_code"));
 			m.setClass_code(rs.getString("class_code"));
 			m.setMenu_name(rs.getString("menu_name"));
-			m.setPrice(rs.getString("price"));
+			m.setPrice(rs.getInt("price"));
 			m.setImg(rs.getString("img"));
 			list.add(m);
 		}
@@ -288,7 +288,7 @@ public class MngrDBBean {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, product.getClass_code());
 			pstmt.setString(2, product.getMenu_name());
-			pstmt.setString(3, product.getPrice());
+			pstmt.setInt(3, product.getPrice());
 			pstmt.setString(4, product.getImg());
 			pstmt.executeUpdate();
 
@@ -496,7 +496,7 @@ public class MngrDBBean {
 		      try {
 		         conn = getConnection();
 		            
-		         String sql = "insert into cafe_order value(?,?)";
+		         String sql = "insert into cafe_order(cus_code, od_total_amt) value(?,?)";
 		         pstmt = conn.prepareStatement(sql);
 		         pstmt.setString(1, cus_code);
 		         pstmt.setInt(2, od_total_amt);
@@ -540,7 +540,9 @@ public class MngrDBBean {
 					try {pstmt.close();} catch (SQLException ex) {}
 				if (conn != null)
 					try {conn.close();} catch (SQLException ex) {}
+
 			}
+
 			return a;
 		}
 }

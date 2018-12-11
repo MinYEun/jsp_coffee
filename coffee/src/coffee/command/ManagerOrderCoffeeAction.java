@@ -16,10 +16,10 @@ public class ManagerOrderCoffeeAction implements CommandAction {
 		MngrDBBean dbPro = MngrDBBean.getInstance();
 		
 		String cus_code = request.getParameter("cus_code");
-		int od_total_amt = Integer.parseInt(request.getParameter("od_total_amt"));
-		System.out.println(od_total_amt);
+		String od_total_amt = request.getParameter("od_total_amt");
+//		System.out.println(od_total_amt);
 		
-		dbPro.InsertOrder(cus_code, od_total_amt);
+		dbPro.InsertOrder(cus_code, Integer.parseInt(od_total_amt));
 		
 		return "/mngr/mOrderCoffee.jsp";
 	}

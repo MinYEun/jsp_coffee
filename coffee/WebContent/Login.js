@@ -10,7 +10,7 @@ $(document).ready(function() {
 			url : "/coffee/index.do",
 			data : query,
 			success : function(data){
-			window.location.href="/coffee/mOrderCoffee.do";
+			window.location.href="/coffee/mOrderCoffeemain.do";
 			}
 		});
 	}

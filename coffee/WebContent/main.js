@@ -121,7 +121,7 @@ $(document).ready(function() {
 		alert("주문 추가 버튼클릭");
 		$.ajax({
 			success : function(data) {
-				window.location.href = "/coffee/mOrderCoffee.do";
+				window.location.href = "/coffee/mOrderCoffeemain.do";
 			}
 		});
 	});

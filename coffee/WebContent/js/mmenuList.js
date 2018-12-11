@@ -66,6 +66,27 @@ $(document).ready(function(){
 			}
 		});
 	});
+	
+	$("#btn_p").click(function(){
+		var a =$('#realtotal').val();
+		console.log(Number(a));
+		console.log(typeof a);
+		//결제 눌렀을 때
+		var query= {		 
+			cus_code : $("#cus_ph_num").val(),
+		   	od_total_amt : a
+		};			
+			
+		$.ajax({
+			type : "post",
+			url : "/coffee/mOrderCoffee.do",
+			data : query,
+			success : function(data) {	
+				alert("추가 성공");	
+				location.href="/coffee/mOrderCoffeemain.do";
+			}
+		});
+	});
 });
 
 
@@ -184,23 +205,7 @@ $(document).on("click",".num",function(){
 
 	};
 		
-	$("#btn_p").click(function(){
-		//결제 눌렀을 때
-		var query= {		 
-			cus_code : $("#cus_ph_num").val(),
-		   	od_total_amt : $("#realtotal").val()
-		};			
-			
-		$.ajax({
-			type : "post",
-			url : "/coffee/mOrderCoffee.do",
-			data : query,
-			success : function(data) {	
-				alert("추가 성공");	
-				location.href="/coffee/mOrderCoffee.do";
-			}
-		});
-	});
+	
 
 
 
