@@ -1,6 +1,7 @@
 package coffee.bean;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -227,10 +228,7 @@ public class MngrDBBean {
 	        	if (conn != null) try { conn.close(); } catch(SQLException ex) {}
 	        }
 	}
-	
-	////////////////////////////메뉴 관리 메소드/////////////////////////////////
-	
-	 //메뉴 세션 저장
+
 	public ArrayList<MenuBean> getMenuList(){
 		ArrayList<MenuBean> list = null;
 		PreparedStatement pstmt = null;
@@ -456,5 +454,65 @@ public class MngrDBBean {
 	         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
 	         if(conn!=null)try {conn.close();}catch(Exception e) {}
 	      }
-	   }
+	}
+	
+	//주문 추가
+		public void InsertOrder(String od_code, String cus_code, Date od_date, int od_amount_price) {
+		      Connection conn = null;
+		      PreparedStatement pstmt = null;
+		      ResultSet rs = null;
+		      try {
+		         conn = getConnection();
+		            
+		         String sql = "insert into cafe_order value(?,?,?,?)";
+		         pstmt = conn.prepareStatement(sql);
+		         pstmt.setString(1, od_code);
+		         pstmt.setString(2, cus_code);
+		         pstmt.setDate(3, od_date);
+		         pstmt.setInt(4, od_amount_price);
+		         pstmt.executeUpdate();
+		      }catch(Exception e) {
+		         System.out.println("주문 추가 오류.");
+		      }finally {
+		         if(rs!=null)try {rs.close();}catch(Exception e) {}
+		         if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+		         if(conn!=null)try {conn.close();}catch(Exception e) {}
+		      }
+		}
+		
+		// 고객 포인트 조회
+		public JSONArray selectPoint(String cus_code) {
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			JSONObject jsonObject;
+			JSONArray jsonArray = new JSONArray();
+			
+			try {
+				conn = getConnection();
+
+				String sql = "select * from customer where cus_code = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, cus_code); 
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()){
+					jsonObject = new JSONObject();
+					jsonObject.put("cus_code", rs.getString("cus_code"));
+					jsonObject.put("cus_name", rs.getString("cus_name"));
+					jsonObject.put("cus_point", rs.getInt("cus_ponit"));
+					jsonArray.add(jsonObject);
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			} finally {
+				if (rs != null)
+					try {rs.close();} catch (SQLException ex) {}
+				if (pstmt != null)
+					try {pstmt.close();} catch (SQLException ex) {}
+				if (conn != null)
+					try {conn.close();} catch (SQLException ex) {}
+			}
+			return jsonArray;
+		}
 }

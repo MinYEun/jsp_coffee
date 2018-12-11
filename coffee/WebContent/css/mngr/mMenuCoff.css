@@ -1,8 +1,10 @@
 @charset "EUC-KR";
 
+
 html {
 	overflow-y: hidden;
 }
+
 
 h1 {
 	letter-spacing: 5px;

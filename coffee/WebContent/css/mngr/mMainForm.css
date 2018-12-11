@@ -29,9 +29,9 @@ html, body {
 
 .menu_mn {
 	width: 250px;
-	height: 110px;
+	height: 130px;
 	background-color: #decac5;
-	padding-top: 20px;
+/* 	padding-top: 20px; */
 	margin: 0 auto;
 	border-top: 1px solid brown;
 	border-bottom: 1px solid brown;
@@ -39,36 +39,31 @@ html, body {
 
 .point_mn{
 	width: 250px;
-	height: 100px;
+	height: 120px;
 	background-color: #decac5;
-	padding-top: 20px;
+ 	padding-top: 10px;
 	margin: 0 auto;
 	border-bottom: 1px solid brown;
 }
 
-.point_mn {
-	width: 250px;
-	height: 110px;
-	background-color: #decac5;
-	padding-top: 20px;
-	margin: 0 auto;
-	border-bottom: 1px solid brown;
-}
+
 
 .staff_mn {
 	width: 250px;
-	height: 110px;
+	height: 130px;
 	background-color: #decac5;
-	padding-top: 20px;
+ 	padding-top: 10px; 
+	margin-top: -20px;
 	margin: 0 auto;
 	border-bottom: 1px solid brown;
 }
 
 .cus_mn {
 	width: 250px;
-	height: 130px;
+	height: 140px;
 	background-color: #decac5;
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	margin: 0 auto;
 	border-bottom: 1px solid brown;
 }
@@ -77,7 +72,7 @@ html, body {
 	width: 250px;
 	height: 110px;
 	background-color: #decac5;
-	padding-top: 20px;
+	padding-top: 10px;
 	margin: 0 auto;
 	border-bottom: 1px solid brown;
 }
@@ -86,7 +81,7 @@ html, body {
 	width: 250px;
 	height: 100%;
 	background-color: #decac5;
-	padding-top: 20px;
+	padding-top: 10px;
 	margin: 0 auto;
 	border-bottom: 1px solid brown;
 }
@@ -182,7 +177,7 @@ html, body {
 /* } */
 
 .order_list {
-	width: 400px;
+	width: 450px;
 	height: 760px;
 	display: inline;
 	font-size: 20px;
@@ -195,21 +190,49 @@ html, body {
 }
 
 #list{
-	height: 80%;
+	height: 70%;
 	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 50px;
 }
 
-#btn_j {
-	width: 90px;
-	height: 50px;
+#list > div {
+	display: inline;
+}
+
+
+.aa > div {
+	display: inline;
+}
+
+#cus > #cus_poi{
+	width: 50px;
+	height: 25px;
+	background-color: white;
+	border-radius: 5px;
+	border: 2px solid black;
+	margin-top: 5px;
+}
+
+#etc > button {
+	width: 100px;
+	height: 60px;
 	border-radius: 5px;
 	background-color: white;
 	border: 2px solid black;
 	font-size: 18px;
+	margin: 25px;
 }
 
+
 #price {
-	margin-bottom: 10px;
+	
+}
+
+#total {
+	width: 80%;
+	height: 40px;
+	font-size: 20px;
 }
 
 #btn #btn_mod{

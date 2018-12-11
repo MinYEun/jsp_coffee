@@ -29,11 +29,22 @@ $(document).ready(function() {
 		});
 	});	
 	
+
+	//메뉴 조회 수정
+	$("#point_sel").click(function() {
+		$.ajax({
+			success : function(data) {
+				window.location.href = "/coffee/mPoint.do";
+			}
+		});
+	});
+		
 	//메뉴 삭제
 	$("#menu_del").click(function() {
 		$.ajax({
 			success : function(data) {
 				window.location.href = "/coffee/mMenuDel.do";
+
 			}
 		});
 	});	
@@ -120,10 +131,9 @@ $(document).ready(function() {
 		$.ajax({
 			type : "post",
 			url : "/coffee/salesPro.do",
-			success:function(data){
+			success:function(data) {
 				window.location.href="/coffee/salesMain.do";
 			}
 		});
-	});	
-	
+	});
 });
