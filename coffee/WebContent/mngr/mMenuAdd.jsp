@@ -28,7 +28,7 @@
 			<img id="menu_img" src="http://placehold.it/240x300" ></img>
 		</div>
 	<span id="file_inf">
-		<select name="menu_Class">
+		<select id="inf">
 			<option>COFFEE</option>
 			<option>SMOOTHEI</option>
 			<option>ADE</option>
@@ -45,9 +45,6 @@
         height:20px;" maxlength="5" placeholder="메뉴 가격">
         <br/>
 		<br/>
-		
-		<input id="menu_ex" name="menu_ex" type="text" style="width:200px; 
-				height:150px;" maxlength="50" placeholder="메뉴 설명">
 	</span>
 	<div id="file_up">
 		<input type="file" id="upload" multiple accept="image/*" onchange="loadFile(this);" ></input>

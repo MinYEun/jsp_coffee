@@ -1,34 +1,19 @@
-$(document).ready(function() {
-
-	$("#coffee").click(function() {
-		$.ajax({
-			success : function(data) {
-				window.location.href = "/coffee/mMenuCoff.do";
-			}
-		});
-	});
-
-	$("#smoothie").click(function() {
-		$.ajax({
-			success : function(data) {
-				window.location.href = "/coffee/mMenuSmo.do";
-			}
-		});
-	});
-
-	$("#ade").click(function() {
-		$.ajax({
-			success : function(data) {
-				window.location.href = "/coffee/mMenuAde.do";
-			}
-		});
-	});
-
-	$("#side_menu").click(function() {
-		$.ajax({
-			success : function(data) {
-				window.location.href = "/coffee/mMenuSide.do";
-			}
-		});
-	});
-});
+$("#file_add").click(function(){
+      var formData = new FormData();
+      formData.append("menu_img",$("#menu_img")[0].files[0]);
+      formData.append("p_code",$("#p_code").val());
+      formData.append("p_name",$("#p_name").val());
+      formData.append("p_price",$("#p_price").val());
+      $.ajax({
+            type : "post",
+            url : "/cafe/admin/productInsertPro.do",
+            data : formData,
+            enctype : 'multipart/form-data',
+            processData : false,
+            contentType : false,
+            dataType : 'text',
+            success:function(data){
+               window.location.href = "/cafe/admin/menuMain.do";
+            }
+         })
+   });
