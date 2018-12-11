@@ -75,6 +75,7 @@ $(document).ready(function(){
 		var query= {		 
 			cus_code : $("#cus_ph_num").val(),
 		   	od_total_amt : a
+		   	
 		};			
 			
 		$.ajax({
