@@ -113,7 +113,8 @@
 				결제 금액
 				<input type="text" id="realtotal" />
 			</div>
-			<div>
+			<div id="cus_num">
+				고객 번호
 				<input type="text" id="cus_ph_num" />
 			</div>
 			<div id="etc">

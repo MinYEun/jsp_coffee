@@ -171,7 +171,7 @@ html, body {
 
 .order_list {
 	width: 450px;
-	height: 760px;
+	height: 780px;
 	display: inline;
 	font-size: 20px;
 	font-weight: bold;
@@ -204,7 +204,7 @@ html, body {
 /* 조회버튼 */
 #cus_poi {    
 	width: 70px;
-	height: 35px;
+	height: 25px;
 	border-radius: 5px;
 	background-color: white;
 	border: 2px solid black;
@@ -215,7 +215,7 @@ html, body {
 /* 결제버튼 */
 #btn_p {
 	width: 80px;
-	height: 40px;
+	height: 35px;
 	border-radius: 5px;
 	background-color: white;
 	border: 2px solid black;
@@ -225,14 +225,22 @@ html, body {
 
 
 #total {
-	width: 70%;
-	height: 30px;
+	width: 60%;
+	height: 20px;
 	font-size: 15px;
 }
 
 #point_use{
 	font-size: 14px;
 	display: inline;
+}
+
+#real{
+	font-size: 14px;
+}
+
+#cus_num{
+	font-size: 14px;
 }
 
 #cus{
@@ -243,6 +251,10 @@ html, body {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 50%;
-	height: 30px;
+	height: 20px;
 	font-size: 15px;
+}
+
+#cus_ph_num{
+	margin: 5px;
 }

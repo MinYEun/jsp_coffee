@@ -66,10 +66,6 @@ $(document).ready(function(){
 			}
 		});
 	});
-//	 $("#use_po").change(function() {
-//		 alert("dd");
-//         realprice();
-//     });
 });
 
 
@@ -188,11 +184,24 @@ $(document).on("click",".num",function(){
 
 	};
 		
-	$(document).on("click", "#btn_p", function(){
+	$("#btn_p").click(function(){
 		//결제 눌렀을 때
-		var point = 0
-		point 
+		var query= {		 
+			cus_code : $("#cus_ph_num").val(),
+		   	od_total_amt : $("#realtotal").val()
+		};			
+			
+		$.ajax({
+			type : "post",
+			url : "/coffee/mOrderCoffee.do",
+			data : query,
+			success : function(data) {	
+				alert("추가 성공");	
+				location.href="/coffee/mOrderCoffee.do";
+			}
+		});
 	});
+
 
 
 
