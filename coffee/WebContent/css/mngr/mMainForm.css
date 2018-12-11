@@ -8,7 +8,7 @@ html, body {
 
 .ordercoff {
 	width: 1500px;
-	height: 980px;
+	height: 800px;
 	transform: translatex(20%);
 	display: inline-block;
 	background-color: white;
@@ -97,7 +97,7 @@ html, body {
 
 .menu_md {
 	width: 900px;
-	height: 1000px;
+	height: 750px;
 	float: left;
 	position: relative;
 	overflow: hidden;

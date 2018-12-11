@@ -12,10 +12,6 @@
 		<div class="inner">
 			<table height="200px" align="center">
 				<tr>
-					<td width="150px" align="center"><img width="150px"
-						height="80px" src="/coffee/images/login2.png">
-					</td>
-
 					<td width="300px">
 						<label for="phone">핸드폰</label>
 							<input id="phone" name="phone" type="text" size="25" maxlength="50"

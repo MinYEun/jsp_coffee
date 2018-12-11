@@ -78,7 +78,7 @@
 				</div>
 			</span>
 			<div class="status">
-				xxx님 안녕하세요
+				Cafe Hara
 				<button id="logout" type="button">로그아웃</button>
 				<div id="content" class="box2"></div>
 			</div>
@@ -114,7 +114,7 @@
 				</div>
 			</span>
 			<div class="status">
-				xxx님 안녕하세요
+				Cafe Hara
 				<button id="logout" type="button">로그아웃</button>
 				<div id="content" class="box2"></div>
 			</div>
