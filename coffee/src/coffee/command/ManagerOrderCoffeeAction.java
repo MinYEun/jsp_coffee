@@ -10,6 +10,8 @@ public class ManagerOrderCoffeeAction implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
+		System.out.println("ManagerOrderCoffeeAction");
+		
 		//DB에 주문목록 넣기
 		MngrDBBean dbPro = MngrDBBean.getInstance();
 		

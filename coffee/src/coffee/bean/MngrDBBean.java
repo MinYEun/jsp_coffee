@@ -541,14 +541,6 @@ public class MngrDBBean {
 				if (conn != null)
 					try {conn.close();} catch (SQLException ex) {}
 			}
-<<<<<<< HEAD
-			return jsonArray;
-		}
-
-		
-=======
 			return a;
 		}
-
->>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 }
