@@ -68,14 +68,16 @@ $(document).ready(function(){
 	});
 });
 
+
+// 총 가격 구하기
 function totalprice(){
 	var totalprice = 0;
-	for(var i=0; i<$(".aa").length; i++){
-		var money = Number($(".aa").eq(i).find(" div:eq(3)").text());
-		totalprice = totalprice + money;
-		console.log(totalprice);
+	for(var i=0; i<$(".or_menu").length; i++){
+		var money = Number($(".or_menu").eq(i).find(" div:eq(3)").text()); // 각 메뉴의 총 가격
+		totalprice = totalprice + money; // 전체 총 가격
 	}
 	$("#total").val(totalprice);
+	$("#realtotal").val(totalprice);
 } 
 
 
@@ -97,31 +99,31 @@ $(document).on("click",".num",function(){
 
 
 	$(document).on("click", ".list_coff", function(){ 
-    //상품리스트 눌렀을시 페이리스트 출력
+    //상품리스트 눌렀을시 페이리스트 출력(커피)
 		var tr = $(this).attr("class");
 		var n = $(".list_coff").index(this);
 		
 		var name = $(".list_coff:eq("+n+") div:eq(1)").text();
 		var price = $(".list_coff:eq("+n+") div:eq(2)").text();
 
-	$("#list").append('<div class="aa">' 
+	$("#list").append("<div class='or_menu'>" 
 						+ "<div class='n'>" + name +"</div>"+ '&nbsp' 
 			 			+ "<div class='p'>" + price +"</div>" + '&nbsp' 
 			 			+ "<div class='q'>" + "<input type='number' class='num' name='quantity' value='1' min='1' max='100'  />" + "</div>" + '&nbsp' 
 			 			+ "<div class='t'>"+ price + "</div>"
-			 			+ "</div>" + "<br/>");
+			 			+ "</div>" + "<br />");
 	totalprice();
 	
 	});
 	
 	$(document).on("click", ".list_smo", function(){ 
-	    //상품리스트 눌렀을시 페이리스트 출력
+	    //상품리스트 눌렀을시 페이리스트 출력(스무디)
 			var tr = $(this).attr("class");
 			var n = $(".list_smo").index(this);
 			
 			var name = $(".list_smo:eq("+n+") div:eq(1)").text();
 			var price = $(".list_smo:eq("+n+") div:eq(2)").text();
-		$("#list").append('<div class="aa">' 
+		$("#list").append('<div class="or_menu">' 
 							+ "<div class='n'>" + name +"</div>"+ '&nbsp' 
 				 			+ "<div class='p'>" + price +"</div>" + '&nbsp' 
 				 			+ "<div class='q'>" + "<input type='number' class='num' name='quantity' value='1' min='1' max='100'  />" + "</div>" + '&nbsp' 
@@ -132,13 +134,13 @@ $(document).on("click",".num",function(){
 		});
 	
 	$(document).on("click", ".list_ade", function(){ 
-	    //상품리스트 눌렀을시 페이리스트 출력
+	    //상품리스트 눌렀을시 페이리스트 출력(에이드)
 			var tr = $(this).attr("class");
 			var n = $(".list_ade").index(this);
 			
 			var name = $(".list_ade:eq("+n+") div:eq(1)").text();
 			var price = $(".list_ade:eq("+n+") div:eq(2)").text();
-		$("#list").append('<div class="aa">' 
+		$("#list").append('<div class="or_menu">' 
 							+ "<div class='n'>" + name +"</div>"+ '&nbsp' 
 				 			+ "<div class='p'>" + price +"</div>" + '&nbsp' 
 				 			+ "<div class='q'>" + "<input type='number' class='num' name='quantity' value='1' min='1' max='100'  />" + "</div>" + '&nbsp' 
@@ -149,16 +151,16 @@ $(document).on("click",".num",function(){
 		});
 	
 	$(document).on("click", ".list_side", function(){ 
-	    //상품리스트 눌렀을시 페이리스트 출력
+	    //상품리스트 눌렀을시 페이리스트 출력(사이드메뉴)
 			var tr = $(this).attr("class");
 			var n = $(".list_side").index(this);
 			
 			var name = $(".list_side:eq("+n+") div:eq(1)").text();
 			var price = $(".list_side:eq("+n+") div:eq(2)").text();
-		$("#list").append('<div class="aa">' 
+		$("#list").append('<div class="or_menu">' 
 							+ "<div class='n'>" + name +"</div>"+ '&nbsp' 
 				 			+ "<div class='p'>" + price +"</div>" + '&nbsp' 
-				 			+ "<div class='q'>" + "<input type='number' class='num' name='quantity' value='1' min='1' max='100'  />" + "</div>" + '&nbsp' 
+				 			+ "<div class='q'>" + "<input type='number' class='num' name='quantity' value='1' min='0' max='100'  />" + "</div>" + '&nbsp' 
 				 			+ "<div class='t'>"+ price + "</div>"
 				 			+ "</div>" + "<br/>");
 		totalprice();
@@ -166,10 +168,40 @@ $(document).on("click",".num",function(){
 		});
 	
 	$(document).on("click", "#cus_poi", function(){
+		var total = $("#total").val();
 		//조회 눌렀을 때
-		window.open("/coffee/mngr/mCusPoSel.jsp", "newWindow" ,"width=800, height=700, resizable=yes");
-
+		window.open("/coffee/mngr/mCusPoSel.jsp?sprice="+total, "newWindow" ,"width=600, height=500, resizable=yes");
 	});
+
+	function realprice(){
+			var realprice = 0;
+		    var totalprice = $("#total").val();
+		    var usePoint = $("#use_po").val();
+		    var realprice = Number(totalprice) - Number(usePoint);
+		    console.log(realprice);
+		    console.log(usePoint);
+		     $("#realtotal").val(realprice);
+
+	};
+		
+	$("#btn_p").click(function(){
+		//결제 눌렀을 때
+		var query= {		 
+			cus_code : $("#cus_ph_num").val(),
+		   	od_total_amt : $("#realtotal").val()
+		};			
+			
+		$.ajax({
+			type : "post",
+			url : "/coffee/mOrderCoffee.do",
+			data : query,
+			success : function(data) {	
+				alert("추가 성공");	
+				location.href="/coffee/mOrderCoffee.do";
+			}
+		});
+	});
+
 
 
 

@@ -489,19 +489,17 @@ public class MngrDBBean {
 	}
 	
 	//주문 추가
-		public void InsertOrder(String od_code, String cus_code, Date od_date, int od_amount_price) {
+		public void InsertOrder(String cus_code, int od_total_amt) {
 		      Connection conn = null;
 		      PreparedStatement pstmt = null;
 		      ResultSet rs = null;
 		      try {
 		         conn = getConnection();
 		            
-		         String sql = "insert into cafe_order value(?,?,?,?)";
+		         String sql = "insert into cafe_order value(?,?)";
 		         pstmt = conn.prepareStatement(sql);
-		         pstmt.setString(1, od_code);
-		         pstmt.setString(2, cus_code);
-		         pstmt.setDate(3, od_date);
-		         pstmt.setInt(4, od_amount_price);
+		         pstmt.setString(1, cus_code);
+		         pstmt.setInt(2, od_total_amt);
 		         pstmt.executeUpdate();
 		      }catch(Exception e) {
 		         System.out.println("주문 추가 오류.");
@@ -513,27 +511,25 @@ public class MngrDBBean {
 		}
 		
 		// 고객 포인트 조회
-		public JSONArray selectPoint(String cus_code) {
+		public int selectPoint(String cus_code) {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
 			JSONObject jsonObject;
 			JSONArray jsonArray = new JSONArray();
+			int a=0;
 			
 			try {
 				conn = getConnection();
 
-				String sql = "select * from customer where cus_code = ?";
+				String sql = "select cus_point from customer where cus_code = ?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, cus_code); 
 				rs = pstmt.executeQuery();
 				
 				while(rs.next()){
 					jsonObject = new JSONObject();
-					jsonObject.put("cus_code", rs.getString("cus_code"));
-					jsonObject.put("cus_name", rs.getString("cus_name"));
-					jsonObject.put("cus_point", rs.getInt("cus_ponit"));
-					jsonArray.add(jsonObject);
+					a=rs.getInt("cus_point");
 				}
 			} catch (Exception ex) {
 				ex.printStackTrace();
@@ -545,8 +541,14 @@ public class MngrDBBean {
 				if (conn != null)
 					try {conn.close();} catch (SQLException ex) {}
 			}
+<<<<<<< HEAD
 			return jsonArray;
 		}
 
 		
+=======
+			return a;
+		}
+
+>>>>>>> branch 'master' of https://github.com/MinYEun/jsp_coffee.git
 }

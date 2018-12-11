@@ -11,6 +11,7 @@ public class ManagerLogoutAction implements CommandAction {
 		// TODO Auto-generated method stub
 		request.getSession().removeAttribute("id");
 		request.getSession().removeAttribute("name");
+		request.getSession().invalidate();
 		
 		return "/Logout.jsp";
 	}
