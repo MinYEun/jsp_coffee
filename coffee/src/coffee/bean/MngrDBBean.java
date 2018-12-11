@@ -397,7 +397,7 @@ public class MngrDBBean {
 				jsonObject = new JSONObject();
 				jsonObject.put("cus_code", rs.getString("cus_code"));
 				jsonObject.put("cus_name", rs.getString("cus_name"));
-				jsonObject.put("cus_point", rs.getInt("cus_ponit"));
+				jsonObject.put("cus_point", rs.getInt("cus_point"));
 				jsonArray.add(jsonObject);
 			}
 		} catch (Exception ex) {
@@ -432,7 +432,7 @@ public class MngrDBBean {
 	            jsonObject = new JSONObject();
 	            jsonObject.put("cus_code",rs.getString("cus_code"));
 	            jsonObject.put("cus_name",rs.getString("cus_name"));
-	            jsonObject.put("cus_ponit",rs.getInt("cus_ponit"));
+	            jsonObject.put("cus_point",rs.getInt("cus_point"));
 	            jsonArray.add(jsonObject);
 	         }
 	      }catch(Exception e) {
@@ -544,5 +544,33 @@ public class MngrDBBean {
 			}
 
 			return a;
+<<<<<<< HEAD
 		}
+=======
+		}
+		
+		// 포인트 추가
+		public void updatePoint(int point, String cus_code) {
+			   Connection conn = null;
+			   PreparedStatement pstmt = null;
+			   ResultSet rs = null;
+			   try {
+			      conn = getConnection();
+			            
+			      String sql = "update customer set cus_point=? where cus_code=?";
+			      pstmt = conn.prepareStatement(sql);
+			      pstmt.setInt(1, point);
+			      pstmt.setString(2, cus_code);
+			      pstmt.executeUpdate();
+			   }catch(Exception e) {
+			      System.out.println("포인트 수정 오류.");
+			   }finally {
+			      if(rs!=null)try {rs.close();}catch(Exception e) {}
+			      if(pstmt!=null)try {pstmt.close();}catch(Exception e) {}
+			      if(conn!=null)try {conn.close();}catch(Exception e) {}
+			      }
+		}
+
+
+>>>>>>> refs/remotes/origin/master
 }
