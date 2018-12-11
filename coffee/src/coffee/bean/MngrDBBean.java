@@ -544,9 +544,6 @@ public class MngrDBBean {
 			}
 
 			return a;
-<<<<<<< HEAD
-		}
-=======
 		}
 		
 		// 포인트 추가
@@ -570,7 +567,4 @@ public class MngrDBBean {
 			      if(conn!=null)try {conn.close();}catch(Exception e) {}
 			      }
 		}
-
-
->>>>>>> refs/remotes/origin/master
 }
