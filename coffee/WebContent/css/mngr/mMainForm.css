@@ -169,13 +169,6 @@ html, body {
 	background-color: white;
 }
 
-/* .list_wrap > button { */
-/* 	float: left; */
-/* 	margin: 10px; */
-/* 	width: 200px; */
-/* 	height: 250px; */
-/* } */
-
 .order_list {
 	width: 450px;
 	height: 760px;
@@ -193,48 +186,63 @@ html, body {
 	height: 70%;
 	margin: 0 auto;
 	overflow: hidden;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
+}
+
+.or_menu > div {
+	display: inline;
 }
 
 #list > div {
 	display: inline;
 }
+#price{
+	font-size: 14px;
+
+}
+
+/* 조회버튼 */
+#cus_poi {    
+	width: 70px;
+	height: 35px;
+	border-radius: 5px;
+	background-color: white;
+	border: 2px solid black;
+	font-size: 15px;
+	margin: 5px;
+}
+
+/* 결제버튼 */
+#btn_p {
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: white;
+	border: 2px solid black;
+	font-size: 15px;
+	margin: 5px;
+}
 
 
-.aa > div {
+#total {
+	width: 70%;
+	height: 30px;
+	font-size: 15px;
+}
+
+#point_use{
+	font-size: 14px;
 	display: inline;
 }
 
-#cus > #cus_poi{
-	width: 50px;
-	height: 25px;
-	background-color: white;
-	border-radius: 5px;
-	border: 2px solid black;
-	margin-top: 5px;
+#cus{
+	display: inline;
 }
 
-#etc > button {
-	width: 100px;
-	height: 60px;
-	border-radius: 5px;
-	background-color: white;
-	border: 2px solid black;
-	font-size: 18px;
-	margin: 25px;
-}
-
-
-#price {
-	
-}
-
-#total {
-	width: 80%;
-	height: 40px;
-	font-size: 20px;
-}
-
-#btn #btn_mod{
-	border: 1px soild black;
+#use_po{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 50%;
+	height: 30px;
+	font-size: 15px;
 }

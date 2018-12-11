@@ -96,13 +96,28 @@
 				주문 목록<br>
 			</div>
 			<div id="price">
+				 총 금액
 				<input type="text" id="total" />
 			</div>
+			
+			<div id="point_use">
+				차감 포인트
+				<input type="text" id="use_po" />
+			</div>
+			
 			<div id="cus">
 				<button id="cus_poi">조회</button>
 			</div>
+			
+			<div id="real">
+				결제 금액
+				<input type="text" id="realtotal" />
+			</div>
+			<div>
+				<input type="text" id="cus_ph_num" />
+			</div>
 			<div id="etc">
-				<button id="btn_p" type="submit">결제</button>
+				<button id="btn_p">결제</button>
 			</div>
 		</div>
 
