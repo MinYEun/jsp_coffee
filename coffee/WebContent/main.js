@@ -120,7 +120,7 @@ $(document).ready(function() {
 	$("#order_add").click(function() {
 		$.ajax({
 			success : function(data) {
-				window.location.href = "/coffee/mOrderCoffee.do";
+				window.location.href = "/coffee/mOrderCoffeemain.do";
 			}
 		});
 	});

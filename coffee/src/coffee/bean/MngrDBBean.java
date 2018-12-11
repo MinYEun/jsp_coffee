@@ -496,7 +496,7 @@ public class MngrDBBean {
 		      try {
 		         conn = getConnection();
 		            
-		         String sql = "insert into cafe_order value(?,?)";
+		         String sql = "insert into cafe_order(cus_code, od_total_amt) value(?,?)";
 		         pstmt = conn.prepareStatement(sql);
 		         pstmt.setString(1, cus_code);
 		         pstmt.setInt(2, od_total_amt);
